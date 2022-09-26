@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+    </div>
+  </div>
+
+
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+  <div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal"> Intelligent Solution for Early Stage Prediction of Cardiovascular Diseases Using Artificial Neural Network and Multi-Agent
+          Systems
+        </h1>
+
+        <hr>
+        <h2>Thesis Abstract</h2>
+
+        <h6>Cardiovascular disease is one of the leading causes of death around the world and remains as a major public health
+          problem. Apart from that, early-stage cardiovascular disease diagnosis and cardiovascular disease prediction also
+          signifies a major concern in public health. Most of the time, misdiagnosis of cardiovascular diseases is very common
+          occurrence through the world, for cardio specialists. This platform consists with main three main modules, which
+          are web dashboard application, machine learning module and machine learning web service modules. Machine learning
+          module is based on Artificial Neural network and that was designed using TensorFlow Machine Learning framework.
+          Web dashboard was designed using Flask framework and that allows the end user to input clinical variables for diagnose
+          the process for predict the cardiovascular risk stage. The machine learning web service module was based on REST
+          web services that handle the request-reply between ML module and frontend dashboard. The evaluation of the proposed
+          machine learning classifier model performance (accuracy, sensitivity, and specificity) in this research study showed
+          that the proposed model predicted the class label correctly (above 73%). More than seventy three percent of respondents
+          (including cardio specialists) who participated in the evaluation session agree till strongly agreed that this
+          research followed medical procedures that the result can support early-stage cardiovascular disease diagnosis analysis.</h6>
+
+        </br>
+        <h6>Research Dominas:
+          <b>Cardiovascular Informatics (Cardioinformatics), Deep Learning, Machine Learning, Multi-Agent Systems, Visualizations</b>
+        </h6>
+        <hr>
+        <h4>Submitted in partial fulfillment of the requirements of the B.Eng (Hons) Software Engineering</h4>
+        <h4>
+          <b>University of Westminster, London, United Kingdom</b>
+        </h4>
+        </br>
+        <h3>Supervisor:
+          <b>Achala Chathuranga Aponso</b>
+        </h3>
+        </br>
+        </br>
+        <hr>
+      </div>
+      <hr>
+      <br/>
+
+      <div>
+        <img src="system full.jpg" alt="Italian Trulli">
+        </br>
+        </br>
+        <hr>
+        <h2>Cardiovascular Disease Prediction - System Architecture</h2>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- END MAIN -->
+  </div>
+
+  <script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>

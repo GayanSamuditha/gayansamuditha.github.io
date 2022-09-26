@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+        </div>
+    </div>
+
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal"> Early Stage Cardiovascular Clinical Diagnosis: Approach of Convolutional Neural Network to Classify the Level
+                    of Left Ventricular Ejection Fraction from Echcardiography Electronic Health Records</h1>
+
+                <hr>
+                <h2>Research Abstract</h2>
+
+                <h6> This research study applied a deep learning model to classify the levels of left ventricular ejection fraction
+                    using clinical stages data – text data records in near 950 echocardiography scan reports from different
+                    cardiovascular patients in a Cardiovascular Wards. Currently, Cardiologists and Cardiothoracic surgeons
+                    are manually reviewing the clinical reports especially patients echocardiography reports to diagnose
+                    the cardiovascular clinical stage of left ventricular ejection fraction (LVEF). Although, there are several
+                    ways have been made to automate this cardiovascular clinical processes to extract information from clinical
+                    reports, especially from echocardiography reports, but currently there are limited research studies for
+                    analysing the cardiovascular clinical trials. This research study focused on to establish some baseline
+                    performance measures using a 1- dimensional convolutional neural network (CNN) and determine strategies
+                    for improving classification precision. Currently, we are in first stage of development of the application.
+                    The deep learning model results were promising but were unable to exceed precision or F-scores of 80%
+                    for mild, moderate, or severe LVEF; irrespective of how the training data was sampled, how deeply connected
+                    the neural network layers were, or well the model was tuned. This solution is strongly ropes the need
+                    to develop a break apart algorithm that could help captures conceptual, contextual, and measurement features
+                    from ECHO reports.</h6>
+
+                </br>
+                <h6>Research Dominas:
+                    <b> Cardiovascular Diseases, Clinical Trails, Electronic Health Records (EHR), Echocardiography, Natural
+                        Language Processing (NLP), Text Classification</b>
+                </h6>
+                <hr>
+
+                <h2>Research Justification</h2>
+
+                <h6> An intelligent, reliable, and systematic method for extracting ejection fraction values from ECHO
+                        reports would benefit patients, clinicians, and the wider health system. For patients with heart failure,
+                        it is vital for clinicians to obtain initial outpatient cardiology evaluations in a timely manner. Manually
+                        processing ECHO reports is time consuming and costly to the health system, while rule-based data
+                        extraction methods can lack in generalisability, accuracy, and reliability. Therefore, this study takes
+                        the opportunity to utilise advanced methods for accurately stratifying levels of LVEF from ECHO
+                        reports; to improve the efficiency of the clinician decision-making process based on cardiovascular
+                        risk. This study will explore the use of natural language processing (NLP) for text classification of LVEF
+                        using free-text data from ECHO reports.
+                        </h6>
+
+                </br>
+
+                </br>
+                </br>
+                <hr>
+            </div>
+            <hr>
+            <br/>
+
+            <div>
+                <img src="echo.jpg" alt="Italian Trulli">
+                </br>
+                </br>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- END MAIN -->
+        </div>
+
+        <script>
+            // Get the Sidebar
+            var mySidebar = document.getElementById("mySidebar");
+
+            // Get the DIV with overlay effect
+            var overlayBg = document.getElementById("myOverlay");
+
+            // Toggle between showing and hiding the sidebar, and add overlay effect
+            function w3_open() {
+                if (mySidebar.style.display === 'block') {
+                    mySidebar.style.display = 'none';
+                    overlayBg.style.display = "none";
+                } else {
+                    mySidebar.style.display = 'block';
+                    overlayBg.style.display = "block";
+                }
+            }
+
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+                overlayBg.style.display = "none";
+            }
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+        </div>
+    </div>
+
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal"> Deep Learning Medical Imaging for Early Clinical Stage Identification of Diabetic Retinopathy Detection </h1>
+
+                <hr>
+                <h2>Research Abstract</h2>
+
+                <h6>Diabetic Retinopathy is a complication based on patients suffering from type-1 or type-2 diabetes. Early
+                        detection is essential as complication can lead to vision problems such as retinal detachment, vitreous hemorrhage and glaucoma. The principal stages of diabetic retinopathy are non-Proliferative diabetic retinopathy and Proliferative diabetic retinopathy. In this paper, we propose a transfer learning
+                        based CNN architecture on colour fundus photography that performs relatively well on a much smaller
+                        dataset of skewed classes of 3050 training images and 419 validation images in recognizing classes of
+                        Diabetic Retinopathy from hard exudates, blood vessels and texture. This model is extremely robust and
+                        lightweight, garnering a potential to work considerably well in small real time applications with limited computing power to speed up the screening process. The dataset was trained on Google Colab. We
+                        trained our model on 4 classes - I)No DR ii)Mild DR iii)Moderate DR iv)Proliferative DR, and achieved a
+                        Cohens Kappa score of 0.8836 on the validation set along with 0.9809 on the training set.</h6>
+
+                </br>
+                <h6>Research Dominas:
+                    <b> Diabetics Retinopathy, Deep Learning - Convolutional Neural Network, Medical Imaging</b>
+                </h6>
+                <hr>
+
+
+                </br>
+                </br>
+                <hr>
+            </div>
+            <hr>
+            <br/>
+
+            <div>
+                <img src="dr.jpg" alt="Italian Trulli">
+                </br>
+                </br>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- END MAIN -->
+        </div>
+
+        <script>
+            // Get the Sidebar
+            var mySidebar = document.getElementById("mySidebar");
+
+            // Get the DIV with overlay effect
+            var overlayBg = document.getElementById("myOverlay");
+
+            // Toggle between showing and hiding the sidebar, and add overlay effect
+            function w3_open() {
+                if (mySidebar.style.display === 'block') {
+                    mySidebar.style.display = 'none';
+                    overlayBg.style.display = "none";
+                } else {
+                    mySidebar.style.display = 'block';
+                    overlayBg.style.display = "block";
+                }
+            }
+
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+                overlayBg.style.display = "none";
+            }
+        </script>
+
+</body>
+
+</html>
