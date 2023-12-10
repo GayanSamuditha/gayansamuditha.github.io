@@ -1,0 +1,8 @@
+
+Medium Articles
+
+What is Reinforcement Learning?
+
+"Reinforcement Learning is like many topics with names ending in -ing such as Machine Learning, Deep Learning in AI techniques, etc. Some names like planning and mountaineering, in that it is simultaneously a problem, a class of solution methods that work well on the class of problems, and the field that studies these problems and their solution methods."
+
+

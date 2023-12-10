@@ -1,0 +1,37 @@
+# Research Experience
+
+## Virtusa Corporation, Colombo, Sri Lanka
+
+### Intern - Research and Development (July 2017 - July 2018)
+- [AIRIS (Intelligent Requirement Capturing Platform)](https://eraplatform.refined.site/): Designed to overcome challenges in conventional requirement gathering methods.
+- [CENTROID (Enterprise-grade AI based Digital Test Automation tool)](https://eraplatform.refined.site/): Provides automation for technical and non-technical users.
+- [ACCELLO (Accelerating Software Robotics)](https://eraplatform.refined.site/): Supports distributed parallel execution across various technologies.
+- [LUMOS (Intelligent Requirement Clarity Assessment Framework)](https://eraplatform.refined.site/): Utilizes AI analysis for requirement clarity.
+- Lumos Test: Simplified journey from test case creation to execution with complete traceability.
+- Lumos Defects: Smart defect assessment and triaging.
+- Smart ALM - Scrum: Equipped with an efficient virtual space for scrum sessions and task tracking.
+- Smart ALM - Requirements: Uses Requirement Clarity Index (RCI) for validating requirements.
+- InsightLive SDLC: Enterprise Dashboards for Agile Empowerment.
+- InsightLive Gamified Dashboard: Promotes transparency, quality, and productivity.
+- AITEST (Intelligent Test Management and Optimization Tool): ML-based Test Case Management and Optimization.
+
+## Professional Experience
+
+### Virtusa Corporation Client Side - British Telecommunication, United Kingdom (Remote)
+- **Associate Software Engineer - Platform Engineering (December 2019)**
+- Telecommunication Domain Micro-services, Telco platform Engineering, and Development for BT client.
+
+### Virtusa Corporation Client Side - Modjoul Engineering, Clemson SC, USA (Remote)
+- **Software Engineer - Product and Platform Engineering**
+- Design and Implementation of data analytical dashboards and Machine Learning models for IoT devices. [More info](https://www.virtusa.com/success-stories/aws-based-iot-data-aggregation-analytics-platform)
+
+### Virtusa Corporation Client Side - Iron Mountain, Boston, USA (Remote)
+- **Senior Software Engineer - Research and Development**
+- Developed content services platform providing actionable insights and predictive analytics through ML-based classification. [More info](https://www.ironmountain.com/services/secure-shredding)
+
+### Virtusa Corporation Client Side - Iron Mountain, Boston, USA (Remote)
+- **Lead Software Engineer - Product Development (August 2023 - November 2022)**
+- Developing products for midsize businesses in shredding and Machine Learning-based content management. [More info](https://www.ironmountain.com/resources/whitepapers/p/powering-your-content-with-ai-whitepaper)
+
+### Research Assistant - Case Western Reserve University (August 2023 - Present)
+- Developing Large Language Models (LLMs), Deep Learning Multi-Model Genomics Analysis, Clinical Informatics

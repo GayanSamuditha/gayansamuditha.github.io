@@ -1,0 +1,46 @@
+---
+title: Enterprise Cutting-Edge Projects
+---
+
+## Nexus - Smart Home Garden Watering System ( Home Watering Booster ) 
+### University of Westminster, London, United Kingdom (Level 4 - 1st Year Undergradute)
+
+<img src="Iot2.jpg" style="height: 100%; width: 100%; object-fit: contain" onclick="window.open('https://arxiv.org/abs/2210.07278', 'blank');"/>
+
+<a href="https://arxiv.org/abs/2210.07278" target="_blank">arXiv Preprint</a> | <a href="https://github.com/marvinschmitt/MetaUncertaintyPaper" target="_blank">Code</a><br>
+
+Abstract:
+
+The irrigation system allows water to drip slowly to the roots of plants, either onto the soil surface or directly onto the root zone, through a solenoid valve. However, it is found that the market price of the system is expensive for small area coverage. Thus, this paper proposes a design for a smart home garden irrigation system that implements ready-to-use, energy-efficient, and cost-effective devices. Raspberry Pi, which is implemented in this system is integrated with multi-sensors such as soil moisture sensors, ultrasonic sensors, and light sensors. This proposed system managed to reduce cost, minimize wastewater, and reduce the physical human interface. In this paper, the relay is utilized to control the switching of the solenoid valve. The system also managed to measure the moisture of the soil and control the solenoid valve according to human requirements. It is conducted with Graphical User Interface (GUI) using an Android application to activate watering activity. Email notification is also sent to the home user for alert purposes either for normal or critical operations. An experimental setup has been tested and it is proven that the system can intelligently control and monitor the soil moisture levels in the experiment field.
+
+Project Core Technologies Stack:
+  * IoT Cloud - Ubidots IoT cloud Platform
+  * IoT Platforms - Arduino UNO, ESP8266 NodeMCU Wifi Emmiter
+  * Programming Tech Stack - C++, Android, C++, HTML5, CSS3, Bootstrap, JavaScript, JSON, jQuery UI, REST Web Services, Ubidots Cloud Simulator
+
+----
+
+## Smart Irrigation Controlling System
+### University of Westminster, London, United Kingdom (Level 5 - 2nd Year Undergradute)
+
+<img src="Iot1.jpg" style="height: 100%; width: 100%; object-fit: contain" onclick="window.open('https://arxiv.org/abs/2112.08866', 'blank');"/>
+
+<a href="https://arxiv.org/abs/2112.08866" target="_blank">arXiv Preprint</a> | <a href="https://github.com/marvinschmitt/ModelMisspecificationBF" target="_blank">Code</a><br>
+
+Abstract: 
+In Sri Lanka, agriculture plays an important role in the development of food production. In our country, agriculture depends on monsoons which are not a sufficient source of water. So irrigation is used in the agriculture field. The Internet of Things (IoT) is a milestone in the evolution of technology. IoT plays an important role in many fields, one of that is Agriculture by which it can feed billions of people on Earth in the future. The objective of this paper is aiming to overcome this challenge, the whole system is microcontroller based and can be operated from a remote location through wireless transmission so there is no need to be concerned about irrigation timing as per crop or soil condition. The sensor is used to take sensor readings of soil like soil moisture, temperature, and air moisture, and decision-making is controlled by the user (farmer) by using a microcontroller. The data received from sensors are sent to the server database using wireless transmission. The irrigation will be automated when the moisture and temperature of the field are reduced. The farmer is notified with the information regarding field conditions through mobile periodically. This system will be more useful in areas where there is a scarcity of water and will be worth efficient in satisfying its requirements.
+
+Irrigation system features:
+* remotely controlled water pump
+* Automatic/manual mode
+* humidity and water pump status display
+* Irrigation can be triggered in the Web user interface. In this case, the pump will start for 10s. You can also use the automatic mode. In this case, you set threshold soil humidity in the Web interface. If soil humidity drops below this value pump will switch on for 5s. After 10 min will again check soil moisture and switch the pump on if needed.
+
+
+Project Core Technologies Stack:
+  * IoT Cloud - Ubidots IoT cloud Platform
+  * Google Cloud Platform -  Google IoT, GCP Firebase
+  * Data Analytics -  GCP Analytics, GCP Compute Engine
+  * IoT Platforms - Arduino UNO, ESP8266 NodeMCU Wifi Emmiter
+  * Programming Tech Stack - C++, Android, C++, HTML5, CSS3, Bootstrap, JavaScript, JSON, jQuery UI, REST Web Services, Ubidots Cloud Simulator, Java, Python
+

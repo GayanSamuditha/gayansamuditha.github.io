@@ -1,0 +1,53 @@
+
+
+# Research Projects
+
+
+## Deep Learning Based Early Stage Clinical Detection of Tuberculosis Diseases Using Chest X-Rays
+
+
+### Research Abstract
+Tuberculosis (TB) is an infectious illness that mostly affects the lungs. Tuberculosis bacteria spread from person to person by small droplets sprayed into the air by coughs and sneezes. When someone with untreated, active TB coughs, talks, sneezes, spits, laughs or sings, this might happen. Although TB is infectious, it is difficult to catch. You are significantly more likely to catch TB from someone with whom you live or work than from a stranger. Most persons with active tuberculosis who have had adequate medication therapy for at least two weeks are no longer infectious. There are some Tuberculosis infected areas that are small enough to be inviable to the naked eye and Chest X-ray images of Tuberculosis are frequently wrongly categorized with other diseases with similar radiologic patterns, which can lead to patients who received incorrect medication and worsen their health. Although hospitals in Sri Lanka have well-trained and professional personnel, they lack cutting-edge equipment, which may cause the diagnosing process to be slowed. Using cutting-edge techniques like Deep Learning, Image Processing, and Artificial Intelligence, we would be able to create and deploy a system that might affect TB diagnosis in seconds.
+
+#### Research Dominas: 
+
+Tuberculosis, Deep Learning - Convolutional Neural Network, Medical Imaging
+
+
+
+## Early Stage Cardiovascular Clinical Diagnosis: Approach of Convolutional Neural Network to Classify the Level of Left Ventricular Ejection Fraction from Echocardiography Electronic Health Records
+
+
+
+### Research Abstract
+This research study applied a deep learning model to classify the levels of left ventricular ejection fraction using clinical stages data - text data records in nearly 950 echocardiography scan reports from different cardiovascular patients in Cardiovascular Wards. Currently, Cardiologists and Cardiothoracic surgeons are manually reviewing the clinical reports, especially patients' echocardiography reports to diagnose the cardiovascular clinical stage of left ventricular ejection fraction (LVEF). Although, there are several ways have been made to automate this cardiovascular clinical process to extract information from clinical reports, especially from echocardiography reports, currently, there are limited research studies for analyzing cardiovascular clinical trials. This research study focused on establishing some baseline performance measures using a 1- dimensional convolutional neural network (CNN) and determining strategies for improving classification precision. Currently, we are in the first stage of development of the application. The deep learning model results were promising but were unable to exceed precision or F-scores of 80% for mild, moderate, or severe LVEF; irrespective of how the training data was sampled, how deeply connected the neural network layers were, or well the model was tuned. This solution strongly ropes the need to develop a break-apart algorithm that could help capture conceptual, contextual, and measurement features from the ECHO report.
+
+#### Research Dominas: 
+
+Cardiovascular Diseases, Clinical trials, Electronic Health Records (EHR), Echocardiography, Natural Language Processing (NLP), Text Classification
+
+
+
+
+
+# Deep Learning Medical Imaging for Early Clinical Stage Identification of Diabetic Retinopathy Detection
+
+### Research Abstract
+Diabetic Retinopathy is a complication based on patients suffering from type-1 or type-2 diabetes. Early detection is essential as complications can lead to vision problems such as retinal detachment, vitreous hemorrhage and glaucoma. The principal stages of diabetic retinopathy are non-Proliferative diabetic retinopathy and Proliferative diabetic retinopathy. In this paper, we propose a transfer learning based CNN architecture on colour fundus photography that performs relatively well on a much smaller dataset of skewed classes of 3050 training images and 419 validation images in recognizing classes of Diabetic Retinopathy from hard exudates, blood vessels and texture. This model is extremely robust and lightweight, garnering a potential to work considerably well in small real time applications with limited computing power to speed up the screening process. The dataset was trained on Google Colab. We trained our model on 4 classes - I)No DR ii)Mild DR iii)Moderate DR iv)Proliferative DR, and achieved a Cohens Kappa score of 0.8836 on the validation set along with 0.9809 on the training set.
+
+
+
+# Detection of Changes in Mindfulness by Monitoring Meditation Sessions Using Neural Networks Collaboration with Multi-Agent Systems
+
+### Research Abstract
+Meditation has gained a lot of attraction in the modern world. In most meditation centers, novice meditators follow the wrong way because they cannot track the progress and get proper feedback. In this research, an attempt was made to monitor EEG signals of meditation sessions with ANN technology and a multi-agent-based approach. The proposed solution has the ability to collect the EEG data from expert meditators which have been used to train the artificial neural network. Next, the EEG signals of the novice meditator were given as the input to the trained ANN for classification which outputs whether it is successful or unsuccessful. EEG capturing device has been used to collect the EEG data. The multi-agent system which has been implemented to run java based jade platform will interpret the EEG signals and provide the recommended meditation technique. This experiment used 25 meditators. Next, the meditators were asked to stay without meditating. It has been proved that meditation session has the ability to provide more attention. The accuracy rate is 72%. The multi-agent system is successfully providing feedback by recommending the meditation technique.
+
+
+
+# Intelligent Solution for Early Stage Prediction of Cardiovascular Diseases Using Artificial Neural Network and Multi-Agent Systems
+
+
+## Thesis Abstract
+Cardiovascular disease is one of the leading causes of death around the world and remains a major public health problem. Apart from that, early-stage cardiovascular disease diagnosis and cardiovascular disease prediction also signify a major concern in public health. Most of the time, misdiagnosis of cardiovascular diseases is a very common occurrence throughout the world, for cardio specialists. This platform consists with main three main modules, which are web dashboard application, machine learning module, and machine learning web service modules. The machine learning module is based on an Artificial Neural network that was designed using the TensorFlow Machine Learning framework. The web dashboard was designed using the Flask framework and which allows the end user to input clinical variables for diagnosing the process for predicting the cardiovascular risk stage. The machine learning web service module was based on REST web services that handle the request-reply between the ML module and the frontend dashboard. The evaluation of the proposed machine learning classifier model performance (accuracy, sensitivity, and specificity) in this research study showed that the proposed model predicted the class label correctly (above 73%). More than seventy-three percent of respondents (including cardio specialists) who participated in the evaluation session agreed strongly agreed that this research followed medical procedures and that the result can support early-stage cardiovascular disease diagnosis analysis.
+
+

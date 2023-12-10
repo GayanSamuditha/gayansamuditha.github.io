@@ -1,0 +1,21 @@
+
+# Teaching
+
+## Visiting Lecturer
+University of Westminster 
+Jan 2022 - Apr 2023
+London, United Kingdom
+
+* Module Leader - 6SENG002W: Concurrent Programming (Level 6) 
+
+**6SENG002W: Concurrent Programming**
+**CMT300A / CMT301A: Computer Science Final Project**
+
+As a Visiting Lecturer at the University of Westminster, I was responsible for delivering the 6SENG002W: Concurrent Programming module to undergraduate students. In this role, I designed and delivered engaging lectures, led tutorial classes, and conducted practical sessions to help students develop a deep understanding of this complex and challenging subject matter.
+
+In addition to my teaching responsibilities, I also served as an advisor to final-year research students, providing guidance and support as they pursued projects in a range of research domains related to Machine Learning, Deep Learning, Reinforcement Learning, and other cutting-edge areas. My particular expertise in Medical Informatics, Biomedical Informatics, Health Informatics, Data Science, Multi-Agent Systems, and Gamification made me a valuable resource for students working on projects in these areas.
+
+Throughout my tenure at the University of Westminster, I was committed to fostering a collaborative and supportive learning environment that encouraged students to explore and innovate. I worked closely with colleagues and students alike to share knowledge and insights, and to develop new and innovative approaches to teaching and learning.
+
+*** I'm currently not teaching 6SENG002W and not advicing Level 6 Undergraduate students(PT/FT) from 2023 April ***
+*** The 6SENG002W: Concurrent Programming lecture materials and Codebase have been hide from my teaching website and the Blackboard.*** 

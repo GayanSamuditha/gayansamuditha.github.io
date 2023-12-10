@@ -1,0 +1,42 @@
+---
+about:
+  template: jolla
+  id: about-block
+  image: "img/my_image.jpg"
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/GSam_Stack
+    - icon: github
+      text: Github
+      href: https://github.com/GayanSamuditha
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/gayan-samuditha-023013114/
+    - icon: envelope
+      text: Email
+      href: "mailto:gayansamudithaportal@gmail.com"  
+    - icon: instagram
+      text: Instragram
+      href: https://www.instagram.com/gayya_syack/  
+---
+
+::: {#about-block}
+:::
+
+# Welcome to my website!
+
+I am a graduate who followed a Special Degree in B.Eng.(Hons) in Software Engineering from the University of Westminster, UK, Class of 2019.
+
+With a rich background as an Associate Lead Software Engineer, I boast 5 years of extensive research involvement spanning both Industry and Academia realms. My expertise encompasses a fusion of hands-on industry experience and advanced studies.
+
+Proficient in Engineering Research and Development, Platform Engineering, and Product Development, I specialize in Enterprise Software Development and Management. My skills extend to the realms of Machine Learning, Deep Learning, Reinforcement Learning, and ML Ops for Enterprise-Level Software Engineering in the USA's Software Industry.
+
+I've served as a Visiting Lecturer (Former) at the University of Westminster and held a pivotal role as an Ex-Lead Software Engineer (R&D) at Virtusa Corporation. Presently, I'm engaged as a Ph.D. Student in Biomedical and Health Informatics at Case Western Reserve University. My current research focus revolves around Deep Learning Multi-Model on Genomic Analysis, Large Language Models (LLMs), Prompt Engineering, and Clinical Informatics.
+
+Should you have any queries or wish to explore potential projects, please don't hesitate to reach out. I bring a wealth of experience and expertise to the table, eager to contribute to innovative ventures.
+
+
+
+Please feel free to [contact me](mailto:mail.marvinschmitt@gmail.com) if you have any questions or would like to discuss potential projects.
+
