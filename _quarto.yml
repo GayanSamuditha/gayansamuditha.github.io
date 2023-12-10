@@ -29,17 +29,20 @@ website:
     # your social media handles
     right:
       - icon: twitter
-        href: https://twitter.com/MarvinSchmittML
+        text: Twitter
+        href: https://twitter.com/GSam_Stack
+      - icon: github
+        text: Github
+        href: https://github.com/GayanSamuditha
       - icon: linkedin
+        text: LinkedIn
         href: https://www.linkedin.com/in/gayan-samuditha-023013114/
       - icon: envelope
-        aria-label: email
-        href: "mailto:mail.marvinschmitt@gmail.com"
-      - icon: github
-        href: https://github.com/GayanSamuditha
+        text: Email
+        href: "mailto:gayansamudithaportal@gmail.com"  
       - icon: instagram
-        href: https://www.instagram.com/gayya_syack/   
-  
+        text: Instragram
+        href: https://www.instagram.com/gayya_syack/  
   
 
 # Don't touch unless you know what you are doing :) ------------
