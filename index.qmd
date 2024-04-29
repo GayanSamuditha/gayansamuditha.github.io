@@ -24,19 +24,21 @@ about:
 ::: {#about-block}
 :::
 
-# Welcome to my website!
 
-I am a graduate who followed a Special Degree in B.Eng.(Hons) in Software Engineering from the University of Westminster, UK, Class of 2019.
+<div style="text-align: justify;">
+# Welcome!
 
-With a rich background as an Associate Lead Software Engineer, I boast 5 years of extensive research involvement spanning both Industry and Academia realms. My expertise encompasses a fusion of hands-on industry experience and advanced studies.
+I am an accomplished graduate with a Special Degree in B.Eng. (Hons) in Software Engineering from the University of Westminster, UK, class of 2019.
 
-Proficient in Engineering Research and Development, Platform Engineering, and Product Development, I specialize in Enterprise Software Development and Management. My skills extend to the realms of Machine Learning, Deep Learning, Reinforcement Learning, and ML Ops for Enterprise-Level Software Engineering in the USA's Software Industry.
+With over five years of extensive involvement in research across both industrial and academic settings, I have developed a deep expertise that bridges the gap between hands-on industry applications and advanced academic studies. My professional journey has been marked by significant roles, including that of an Associate Lead Software Engineer, where I honed my skills in engineering research and development, platform engineering, and product development.
 
-I've served as a Visiting Lecturer (Former) at the University of Westminster and held a pivotal role as an Ex-Lead Software Engineer (R&D) at Virtusa Corporation. Presently, I'm engaged as a Ph.D. Student in Biomedical and Health Informatics at Case Western Reserve University. My current research focus revolves around Deep Learning Multi-Model on Genomic Analysis, Large Language Models (LLMs), Prompt Engineering, and Clinical Informatics.
+Specializing in Enterprise Software Development and Management, my technical proficiencies encompass a broad spectrum, including Machine Learning, Deep Learning, Reinforcement Learning, and ML Ops. These skills are particularly tailored to the demands of enterprise-level software engineering within the competitive landscape of the USA's software industry.
 
-Should you have any queries or wish to explore potential projects, please don't hesitate to reach out. I bring a wealth of experience and expertise to the table, eager to contribute to innovative ventures.
+My academic contributions include serving as a Visiting Lecturer at the University of Westminster, and I have played a key role as an Ex-Lead Software Engineer in Research and Development at Virtusa Corporation. Currently, I am pursuing a Ph.D. in Biomedical and Health Informatics at Case Western Reserve University, where my research is focused on cutting-edge topics such as Deep Learning Multi-Model on Genomic Analysis, Large Language Models (LLMs), Prompt Engineering, and Clinical Informatics.
 
+I am always open to discussing potential projects or queries related to my field of expertise. With a solid foundation of knowledge and a dynamic set of skills, I am eager to contribute to and collaborate on innovative ventures that push the boundaries of technology and science.
 
 
 Please feel free to [contact me](mailto:mail.marvinschmitt@gmail.com) if you have any questions or would like to discuss potential projects.
 
+</div>

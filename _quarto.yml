@@ -3,7 +3,7 @@
 # website settings
 website:
   title: "Gayan Samuditha"                                # Your name
-  description: "Gandalf is a PhD Student in Biomedical and Health Informatics at Case Western Reserve University, School of Medicine"   # A brief slogan (optional)
+  description: "Gayan is a PhD Student in Biomedical and Health Informatics at Case Western Reserve University, School of Medicine"   # A brief slogan (optional)
   image: img/my_image.jpg
   
   favicon: img/favicon.png
@@ -19,6 +19,8 @@ website:
         href: projects/index.qmd
       - text: "Research Projects"
         href: researchProjects/researchProjects.qmd
+      - text: "Articles"
+        href: articles/articles.qmd
       - text: "Teaching"
         href: teaching/teaching.qmd
       - text: "Experience"

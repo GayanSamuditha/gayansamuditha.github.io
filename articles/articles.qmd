@@ -1,0 +1,19 @@
+---
+title: "Articles"
+author: "Gayan Samuditha"
+date: "2024-04-28"
+format: html
+---
+
+# Articles Overview
+
+This page provides links to various articles I have written as part of the my classes and scientific discussion. 
+
+The below articles I have written based on the book I read - How To Be A Modern Scientist by Jeff Leek. 
+
+## Articles List
+
+1. [Embracing Open Science Through Scientific Code](Scientific_Code_Blog.qmd)
+2. [Navigating Social Media as a Modern Scientist](navigating_social_media.qmd)
+3. [Strategic Career Planning for Aspiring Scientists](career_planning.qmd)
+
