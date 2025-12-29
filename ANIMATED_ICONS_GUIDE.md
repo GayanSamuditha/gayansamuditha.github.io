@@ -146,3 +146,4 @@ const researchIcons = [
 
 **Note**: The website is fully functional without icons. They enhance the visual appeal but are optional.
 
+
