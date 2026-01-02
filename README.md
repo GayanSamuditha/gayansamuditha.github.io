@@ -35,54 +35,39 @@ This will create an `out` directory with all the static files ready for deployme
 
 ## 🌐 Deployment to GitHub Pages
 
-1. Build the static site:
-```bash
-npm run build
-```
+This website is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-2. The `out` directory contains all the static files.
+### Quick Deploy
 
-3. If your repository is named `gayansamuditha.github.io`, you can:
-   - Copy the contents of the `out` directory to the `docs` folder, OR
-   - Configure GitHub Pages to use the `out` directory as the source
+1. **Organize assets:**
+   ```bash
+   ./setup-assets.sh
+   ```
 
-4. Push to GitHub and enable GitHub Pages in your repository settings.
+2. **Push to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Deploy website"
+   git push origin main
+   ```
 
-### Alternative: Using GitHub Actions
+3. **Enable GitHub Pages:**
+   - Go to repository Settings → Pages
+   - Select "GitHub Actions" as source
+   - Save
 
-You can set up a GitHub Action to automatically build and deploy. Create `.github/workflows/deploy.yml`:
+4. **Wait for deployment:**
+   - Check the Actions tab
+   - Site will be live at: `https://gayansamuditha.github.io`
 
-```yaml
-name: Deploy to GitHub Pages
+### Automatic Deployment
 
-on:
-  push:
-    branches:
-      - main
+The `.github/workflows/deploy.yml` workflow automatically:
+- Builds the site on every push to `main` branch
+- Deploys to GitHub Pages
+- No manual steps needed after initial setup
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          
-      - name: Install dependencies
-        run: npm install
-        
-      - name: Build
-        run: npm run build
-        
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-```
+See `QUICK_DEPLOY.md` for detailed instructions.
 
 ## 📁 Project Structure
 

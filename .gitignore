@@ -31,3 +31,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Old Quarto files (keep for reference, but don't commit)
+# Uncomment if you want to remove old Quarto files
+# /docs/
+# /_freeze/
+# *.qmd
+# /_quarto.yml
+# *.Rproj
