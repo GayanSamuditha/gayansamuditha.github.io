@@ -445,7 +445,7 @@ export default function Home() {
 
           <div className="space-y-2 text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
             <p>
-              Former Senior Engineer with 5+ years building Production Systems in Full Stack Development and AI, and currently an AI Engineer, Ph.D. candidate in Biomedical and Health Informatics. I design and ship end-to-end data and ML pipelines across cloud and HPC for Large-Scale Neuro-imaging and Imaging Genomics of Alzheimer's Disease, LLM-based Modeling of Omics data, and ML-powered content platforms.
+              Former Associate Technical Lead R&D and Platform engineering, and currently an AI Engineer, Ph.D. candidate in Biomedical and Health Informatics. I design and ship end-to-end data and ML pipelines across cloud and HPC for Large-Scale Neuro-imaging and Imaging Genomics of Alzheimer's Disease, LLM-based Modeling of Omics data, and ML-powered content platforms.
             </p>
             <p>
               Strong track record in Distributed Systems and MLOps, taking models from research prototypes to reliable, observable production services.
