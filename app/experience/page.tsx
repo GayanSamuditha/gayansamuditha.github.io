@@ -26,33 +26,13 @@ export default function Experience() {
 
   const professionalExperience = [
     {
-      company: "Virtusa Corporation",
-      location: "Colombo, Sri Lanka",
-      role: "Intern - Research and Development (Global Technology Office)",
-      period: "July 2017 - July 2018 (1 Year)",
+      company: "Virtusa Corporation Client Side - Iron Mountain",
+      location: "Boston, USA (Remote)",
+      role: "Associate Lead Software Engineer - Product Development",
+      period: "July 2023 - November 2022",
       achievements: [
-        "CENTROID (AI-based Digital Test Automation Tool) - Facilitating end-to-end automation for technical and non-technical users, managing distributed agents efficiently.",
-        "LUMOS (Requirement Clarity Assessment) - Leveraging AI for deep analysis, ensuring precise developer-task matching based on requirements.",
-        "Lumos Test (Test Management and Optimization) - Streamlining test case creation to execution, ensuring traceability from requirements to defects.",
-        "AITEST (AI-based Test Management Tool) - ML-driven plugin for advanced test case management and optimization, developed by Virtusa's GTO."
-      ]
-    },
-    {
-      company: "Virtusa Corporation Client Side - British Telecommunication",
-      location: "United Kingdom (Remote)",
-      role: "Associate Software Engineer - Platform Engineering",
-      period: "December 2019",
-      achievements: [
-        "Telecommunication Domain Micro-services, Telco platform Engineering, and Development for BT client."
-      ]
-    },
-    {
-      company: "Virtusa Corporation Client Side - Modjoul Engineering",
-      location: "Clemson SC, USA (Remote)",
-      role: "Software Engineer - Product and Platform Engineering",
-      achievements: [
-        "Design and Implementation of data analytical dashboards and Machine Learning models for IoT devices.",
-        "More info: https://www.virtusa.com/success-stories/aws-based-iot-data-aggregation-analytics-platform"
+        "Product for midsize businesses for shredding and Machine Learning-based platform for content management.",
+        "More info: https://www.ironmountain.com/resources/whitepapers/p/powering-your-content-with-ai-whitepaper"
       ]
     },
     {
@@ -65,13 +45,21 @@ export default function Experience() {
       ]
     },
     {
-      company: "Virtusa Corporation Client Side - Iron Mountain",
-      location: "Boston, USA (Remote)",
-      role: "Associate Lead Software Engineer - Product Development",
-      period: "July 2023 - November 2022",
+      company: "Virtusa Corporation Client Side - Modjoul Engineering",
+      location: "Clemson SC, USA (Remote)",
+      role: "Software Engineer - Product and Platform Engineering",
       achievements: [
-        "Product for midsize businesses for shredding and Machine Learning-based platform for content management.",
-        "More info: https://www.ironmountain.com/resources/whitepapers/p/powering-your-content-with-ai-whitepaper"
+        "Design and Implementation of data analytical dashboards and Machine Learning models for IoT devices.",
+        "More info: https://www.virtusa.com/success-stories/aws-based-iot-data-aggregation-analytics-platform"
+      ]
+    },
+    {
+      company: "Virtusa Corporation Client Side - British Telecommunication",
+      location: "United Kingdom (Remote)",
+      role: "Associate Software Engineer - Platform Engineering",
+      period: "December 2019",
+      achievements: [
+        "Telecommunication Domain Micro-services, Telco platform Engineering, and Development for BT client."
       ]
     },
     {
@@ -82,6 +70,18 @@ export default function Experience() {
       achievements: [
         "6SENG002W - Concurrent Programming",
         "6COSC023C - Final Year Research Project"
+      ]
+    },
+    {
+      company: "Virtusa Corporation",
+      location: "Colombo, Sri Lanka",
+      role: "Intern - Research and Development (Global Technology Office)",
+      period: "July 2017 - July 2018 (1 Year)",
+      achievements: [
+        "CENTROID (AI-based Digital Test Automation Tool) - Facilitating end-to-end automation for technical and non-technical users, managing distributed agents efficiently.",
+        "LUMOS (Requirement Clarity Assessment) - Leveraging AI for deep analysis, ensuring precise developer-task matching based on requirements.",
+        "Lumos Test (Test Management and Optimization) - Streamlining test case creation to execution, ensuring traceability from requirements to defects.",
+        "AITEST (AI-based Test Management Tool) - ML-driven plugin for advanced test case management and optimization, developed by Virtusa's GTO."
       ]
     }
   ]

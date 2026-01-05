@@ -1,11 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import ClientLayout from '@/components/ClientLayout'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Gayan Samuditha - Masters Research in Biomedical and Health Informatics',
@@ -22,12 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Navbar />
-        <main className="min-h-screen">
+        <main>
           <ClientLayout>{children}</ClientLayout>
         </main>
-        <Footer />
       </body>
     </html>
   )
