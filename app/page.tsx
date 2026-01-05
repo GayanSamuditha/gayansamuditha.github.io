@@ -451,8 +451,7 @@ export default function Home() {
               Strong track record in Distributed Systems and MLOps, taking models from research prototypes to reliable, observable production services.
             </p>
           </div>
-          <div className="mt-8 text-sm text-gray-500 font-light space-y-1">
-            <p>2588 Mayfield Road, Cleveland Heights, Ohio 44106</p>
+          <div className="mt-8 text-sm text-gray-500 font-light">
             <p>gayancwru@gmail.com</p>
           </div>
         </div>
