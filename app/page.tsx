@@ -453,7 +453,6 @@ export default function Home() {
           </div>
           <div className="mt-8 text-sm text-gray-500 font-light space-y-1">
             <p>2588 Mayfield Road, Cleveland Heights, Ohio 44106</p>
-            <p>+1 216 467-0831</p>
             <p>gayancwru@gmail.com</p>
           </div>
         </div>
