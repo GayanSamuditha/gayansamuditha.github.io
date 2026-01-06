@@ -14,7 +14,10 @@ import {
   FaAws,
   FaDocker,
   FaLinux,
-  FaGitAlt
+  FaGitAlt,
+  FaDatabase,
+  FaReact,
+  FaNode
 } from 'react-icons/fa'
 import { 
   SiGo,
@@ -30,8 +33,21 @@ import {
   SiMicrosoftazure,
   SiSpring,
   SiJenkins,
-  SiJunit5
+  SiJunit5,
+  SiScikitlearn,
+  SiMlflow,
+  SiKubernetes,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiGnubash,
+  SiPowershell,
+  SiSonarqube,
+  SiGithubactions,
+  SiFreebsd
 } from 'react-icons/si'
+import { BiDna, BiBrain } from 'react-icons/bi'
+import { GiArtificialIntelligence } from 'react-icons/gi'
 
 export default function Home() {
   const socialLinks = [
@@ -303,11 +319,14 @@ export default function Home() {
       'tensorflow': { icon: SiTensorflow, color: '#ff6f00' },
       'pytorch': { icon: SiPytorch, color: '#ee4c2c' },
       'keras': { icon: SiKeras, color: '#d00000' },
+      'scikit-learn': { icon: SiScikitlearn, color: '#f7931e' },
+      'sklearn': { icon: SiScikitlearn, color: '#f7931e' },
       'apache spark': { icon: SiApachespark, color: '#e25a1c' },
       'apache kafka': { icon: SiApachekafka, color: '#231f20' },
-      'kubeflow': { icon: FaDocker, color: '#326ce5' },
+      'kubeflow': { icon: SiKubernetes, color: '#326ce5' },
+      'kubernetes': { icon: SiKubernetes, color: '#326ce5' },
       'apache airflow': { icon: SiApacheairflow, color: '#017cee' },
-      'mlflow': { icon: FaDocker, color: '#0194e2' },
+      'mlflow': { icon: SiMlflow, color: '#0194e2' },
       'spring': { icon: SiSpring, color: '#6db33f' },
       'spring boot': { icon: SiSpring, color: '#6db33f' },
       'docker': { icon: FaDocker, color: '#2496ed' },
@@ -319,11 +338,30 @@ export default function Home() {
       'junit': { icon: SiJunit5, color: '#25a162' },
       'git': { icon: FaGitAlt, color: '#f05032' },
       'github': { icon: FaGitAlt, color: '#181717' },
-      'github actions': { icon: FaGitAlt, color: '#2088ff' },
-      'bash': { icon: FaLinux, color: '#4eaa25' },
-      'powershell': { icon: FaLinux, color: '#012456' },
-      'sql': { icon: FaDocker, color: '#336791' },
+      'github actions': { icon: SiGithubactions, color: '#2088ff' },
+      'bash': { icon: SiGnubash, color: '#4eaa25' },
+      'powershell': { icon: SiPowershell, color: '#012456' },
+      'sql': { icon: SiPostgresql, color: '#336791' },
+      'relational': { icon: FaDatabase, color: '#336791' },
+      'nosql': { icon: SiMongodb, color: '#47a248' },
+      'mongodb': { icon: SiMongodb, color: '#47a248' },
+      'redis': { icon: SiRedis, color: '#dc382d' },
       'oauth': { icon: SiSpring, color: '#eb5424' },
+      'rest api': { icon: FaNode, color: '#339933' },
+      'sonarqube': { icon: SiSonarqube, color: '#4e9bcd' },
+      'freesurfer': { icon: BiBrain, color: '#6b7280' },
+      'fsl': { icon: BiBrain, color: '#8b5cf6' },
+      'antsx': { icon: BiBrain, color: '#ec4899' },
+      'gwas': { icon: BiDna, color: '#10b981' },
+      'plink': { icon: BiDna, color: '#3b82f6' },
+      'cpassoc': { icon: BiDna, color: '#8b5cf6' },
+      'dna language': { icon: BiDna, color: '#f59e0b' },
+      'nucleotide': { icon: BiDna, color: '#ef4444' },
+      'classical ml': { icon: GiArtificialIntelligence, color: '#6366f1' },
+      'model evaluation': { icon: GiArtificialIntelligence, color: '#8b5cf6' },
+      'feature engineering': { icon: GiArtificialIntelligence, color: '#ec4899' },
+      'pipeline orchestration': { icon: SiApacheairflow, color: '#017cee' },
+      'experiment tracking': { icon: SiMlflow, color: '#0194e2' },
     }
     
     // Check for partial matches
@@ -412,331 +450,309 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-                Gayan Samuditha
+      <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          {/* Status badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-100 to-emerald-100 border border-green-300 rounded-full text-sm text-green-700 font-medium mb-6">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Open to PhD Opportunities & Industry Collaborations
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+            Gayan Samuditha
           </h1>
-          <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-                AI/ML Engineer × Computational Biology Researcher
-          </p>
-          <p className="text-xl text-gray-700 mb-4 font-medium">
-                MS Biomedical & Health Informatics | Case Western Reserve University
+          
+          {/* Impactful tagline */}
+          <p className="text-2xl md:text-3xl font-semibold mb-6">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI/ML Engineer</span>
+            <span className="text-gray-400 mx-3">×</span>
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Biomedical Researcher</span>
           </p>
           
-          {/* Key Value Propositions */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto my-12">
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-blue-300 shadow-lg">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">🏢 For Industry</h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                5+ years building production ML systems • Former Associate Technical Lead • Shipped ML pipelines at scale • Expert in MLOps, Cloud (AWS/Azure/GCP), Microservices
-              </p>
+          <p className="text-lg text-gray-600 mb-8 font-light">
+            MS Research @ Case Western Reserve University, School of Medicine
+          </p>
+
+          {/* Key metrics - attention grabbers */}
+          <div className="flex flex-wrap justify-center gap-6 mb-10">
+            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
+              <div className="text-2xl font-bold text-blue-600">6+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wide">Years Industry Experience</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-purple-300 shadow-lg">
-              <h3 className="text-lg font-bold text-purple-700 mb-3">🎓 For Academia</h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Published in BMC Genomics • ASHG presenter • Neuroimaging + Genomics expertise • Deep Learning for Healthcare • Seeking PhD opportunities
-              </p>
+            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
+              <div className="text-2xl font-bold text-purple-600">3+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wide">Research Publications</div>
+            </div>
+            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
+              <div className="text-2xl font-bold text-green-600">1000s</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wide">MRI Scans Processed</div>
+            </div>
+            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
+              <div className="text-2xl font-bold text-orange-600">5+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wide">Production ML Systems</div>
             </div>
           </div>
 
-          {/* Quick Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12 text-center">
-            <div>
-              <p className="text-3xl font-bold text-blue-600">5+</p>
-              <p className="text-sm text-gray-600">Years Industry</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-purple-600">3</p>
-              <p className="text-sm text-gray-600">Publications</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-green-600">10+</p>
-              <p className="text-sm text-gray-600">Tech Stack</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-orange-600">2</p>
-              <p className="text-sm text-gray-600">Innovation Awards</p>
-            </div>
-          </div>
-          
-          <div className="flex justify-center gap-6 mb-8">
-            {socialLinks.map((social, idx) => {
-                  const Icon = social.icon
-                  const colors = ['text-blue-500', 'text-gray-800', 'text-blue-600', 'text-red-500', 'text-pink-500']
-                  return (
-                <a
-                      key={social.text}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                  className={`${colors[idx % colors.length]} hover:scale-110 transition-transform`}
-                      aria-label={social.text}
-                >
-                      <Icon className="w-6 h-6" />
-                    </a>
-                  )
-                })}
+          {/* Value proposition */}
+          <div className="max-w-3xl mx-auto mb-10">
+            <p className="text-lg text-gray-700 font-medium mb-4">
+              Bridging <span className="text-blue-600 font-semibold">Industry-Scale Engineering</span> with <span className="text-purple-600 font-semibold">Cutting-Edge Research</span>
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Former <strong>Associate Technical Lead</strong> turned AI/ML Researcher. I build production-grade ML pipelines for large-scale neuroimaging, genomics, and healthcare AI. Passionate about translating research into real-world impact—from Alzheimer's disease biomarker discovery to DNA language models.
+            </p>
           </div>
 
-          <div className="space-y-4 text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            <p className="text-lg font-medium">
-              <span className="font-bold text-blue-600">Industry-Proven Engineer</span> turned <span className="font-bold text-purple-600">AI Researcher</span> specializing in <span className="font-semibold">Computational Biology, Medical Imaging, and Large-Scale ML Systems</span>
-            </p>
-            <p className="text-base">
-              Unique blend: Production ML engineering (MLOps, Distributed Systems, Cloud) + Cutting-edge research (Neuroimaging, Genomics, LLMs for Omics). Bridge between research innovation and real-world deployment.
-            </p>
-          </div>
-          
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          {/* Dual CTA buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
             <a
-              href="mailto:gayancwru@gmail.com"
-              className="px-8 py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl rounded-lg"
+              href="mailto:gayancwru@gmail.com?subject=PhD%20Opportunity"
+              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
             >
-              📧 Contact Me
+              🎓 Discuss PhD Opportunities
+            </a>
+            <a
+              href="mailto:gayancwru@gmail.com?subject=Industry%20Opportunity"
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
+            >
+              💼 Explore Industry Roles
             </a>
             <a
               href="/cv/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 border-2 border-purple-600 text-purple-700 font-semibold hover:bg-purple-600 hover:text-white transition-colors rounded-lg"
+              className="px-8 py-3 border-2 border-gray-800 text-gray-800 font-medium rounded-lg hover:bg-gray-800 hover:text-white transition-all"
             >
               📄 Download CV
             </a>
-            <a
-              href="#publications"
-              onClick={(e) => handleNavClick(e, '#publications')}
-              className="px-8 py-3 border-2 border-green-600 text-green-700 font-semibold hover:bg-green-600 hover:text-white transition-colors rounded-lg"
-            >
-              📚 Publications
-            </a>
+          </div>
+          
+          {/* Social links */}
+          <div className="flex justify-center gap-6">
+            {socialLinks.map((social, idx) => {
+              const Icon = social.icon
+              const colors = ['text-blue-500', 'text-gray-800', 'text-blue-600', 'text-red-500', 'text-pink-500']
+              return (
+                <a
+                  key={social.text}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${colors[idx % colors.length]} hover:scale-125 transition-transform p-2 bg-white/50 rounded-full shadow-sm`}
+                  aria-label={social.text}
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Research Interests & Expertise Section */}
-      <section id="research-interests" className="py-20 px-6 bg-gradient-to-b from-purple-50/30 to-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-            <span className="border-b-4 border-purple-500 pb-2">Research Interests & Expertise</span>
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Bridging AI/ML Engineering with Computational Biology & Healthcare
-          </p>
+      {/* What I Bring - Dual Value Proposition */}
+      <section id="value" className="py-20 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">What I Bring to the Table</h2>
+          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">A unique combination of production engineering experience and research expertise</p>
           
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white p-6 rounded-lg border-l-4 border-blue-500 shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold text-blue-700 mb-3">🧠 Neuroimaging & Genomics</h3>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>• Large-scale brain MRI analysis (ANTsX, FreeSurfer)</li>
-                <li>• Imaging-derived phenotypes (IDPs)</li>
-                <li>• Cross-phenotype GWAS</li>
-                <li>• Alzheimer's Disease research</li>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* For Industry */}
+            <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/30 p-8 rounded-2xl border border-blue-700/50">
+              <div className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">💼 For Industry & Recruiters</div>
+              <h3 className="text-2xl font-bold mb-6">Production-Ready ML Engineering</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 mt-1">✓</span>
+                  <span><strong>6+ years</strong> building scalable backend systems at enterprise scale (Virtusa, Iron Mountain, British Telecom)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 mt-1">✓</span>
+                  <span><strong>End-to-end ML pipelines</strong> from data ingestion to deployment on AWS, GCP, Azure</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 mt-1">✓</span>
+                  <span><strong>Microservices architecture</strong> with Spring Boot, Docker, Kubernetes, API gateways</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 mt-1">✓</span>
+                  <span><strong>MLOps expertise</strong>: MLflow, Kubeflow, Airflow, model monitoring & observability</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 mt-1">✓</span>
+                  <span><strong>Technical leadership</strong>: Led R&D teams, mentored engineers, drove technical decisions</span>
+                </li>
               </ul>
+              <a 
+                href="mailto:gayancwru@gmail.com?subject=Industry%20Opportunity%20-%20ML%20Engineer"
+                className="inline-block mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-all"
+              >
+                Let's Talk About Roles →
+              </a>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg border-l-4 border-purple-500 shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold text-purple-700 mb-3">🤖 AI/ML for Healthcare</h3>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>• Deep Learning for medical imaging</li>
-                <li>• LLMs for omics sequence modeling</li>
-                <li>• Electronic phenotyping (OMOP CDM)</li>
-                <li>• Precision medicine applications</li>
+
+            {/* For Academia */}
+            <div className="bg-gradient-to-br from-purple-900/50 to-purple-800/30 p-8 rounded-2xl border border-purple-700/50">
+              <div className="text-purple-400 text-sm font-semibold uppercase tracking-wider mb-4">🎓 For Professors & Research Labs</div>
+              <h3 className="text-2xl font-bold mb-6">Research-Driven PhD Candidate</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 mt-1">✓</span>
+                  <span><strong>Published researcher</strong> in BMC Genomics, ASHG conference presentations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 mt-1">✓</span>
+                  <span><strong>Neuroimaging expertise</strong>: ANTsX, FreeSurfer, FSL pipelines at scale (1000s of MRIs)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 mt-1">✓</span>
+                  <span><strong>Genomics & GWAS</strong>: Cross-phenotype association, DNA language models, variant interpretation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 mt-1">✓</span>
+                  <span><strong>HPC & Big Data</strong>: Parallel computing, large-scale data processing, OMOP CDM</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 mt-1">✓</span>
+                  <span><strong>Independent researcher</strong>: Self-directed projects, open-source contributions, teaching experience</span>
+                </li>
               </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold text-green-700 mb-3">⚙️ Production ML Systems</h3>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>• MLOps & model deployment</li>
-                <li>• Distributed systems (Spark, Kafka)</li>
-                <li>• Cloud infrastructure (AWS/Azure/GCP)</li>
-                <li>• Scalable data pipelines</li>
-              </ul>
+              <a 
+                href="mailto:gayancwru@gmail.com?subject=PhD%20Opportunity%20-%20Research%20Lab"
+                className="inline-block mt-8 px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-medium rounded-lg transition-all"
+              >
+                Discuss PhD Opportunities →
+              </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg border-2 border-purple-300">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Seeking PhD Opportunities In:</h3>
-            <div className="grid md:grid-cols-2 gap-4 text-gray-800">
-              <div>
-                <p className="font-semibold text-blue-700 mb-2">Research Areas:</p>
-                <ul className="text-sm space-y-1">
-                  <li>✓ Computational Biology & Bioinformatics</li>
-                  <li>✓ Medical Image Analysis & Computer Vision</li>
-                  <li>✓ Deep Learning for Healthcare</li>
-                  <li>✓ Genomics & Precision Medicine</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-semibold text-purple-700 mb-2">Technical Focus:</p>
-                <ul className="text-sm space-y-1">
-                  <li>✓ Large-scale data processing & HPC</li>
-                  <li>✓ Foundation models for biology</li>
-                  <li>✓ Multi-modal learning (imaging + genomics)</li>
-                  <li>✓ Translational AI research</li>
-                </ul>
-              </div>
+      {/* Core Expertise Areas */}
+      <section id="expertise" className="py-20 px-6 bg-gradient-to-b from-purple-50/50 to-white relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-300/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-300/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-pink-300/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        
+        <div className="max-w-5xl mx-auto relative z-10">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Core Expertise Areas</span>
+          </h2>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Bridging cutting-edge AI research with production-grade engineering</p>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">🧠</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Neuroimaging & Brain MRI</h3>
+              <p className="text-sm text-gray-600">Large-scale MRI analysis, cortical thickness mapping, brain age prediction, Alzheimer's biomarkers</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-purple-500 hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">🧬</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Genomics & DNA Language Models</h3>
+              <p className="text-sm text-gray-600">Foundation models for genomics, variant effect prediction, cross-phenotype GWAS, imaging genetics</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500 hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">🤖</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">ML for Healthcare</h3>
+              <p className="text-sm text-gray-600">Clinical NLP, EHR phenotyping, multimodal learning, precision medicine, FDA-ready ML systems</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-orange-500 hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">📊</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Representation Learning</h3>
+              <p className="text-sm text-gray-600">Self-supervised learning, embedding evaluation, transfer learning for biomedical domains</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-pink-500 hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">⚡</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Scalable ML Systems</h3>
+              <p className="text-sm text-gray-600">HPC pipelines, distributed training, MLOps for research, reproducible science at scale</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-cyan-500 hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">🔬</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Multimodal Biomarkers</h3>
+              <p className="text-sm text-gray-600">Integrating imaging, genetics, and clinical data for disease prediction and patient stratification</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 border-t-2 border-blue-200 bg-gradient-to-b from-white to-blue-50/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+      <section id="about" className="py-24 px-6 border-t-2 border-blue-200 bg-gradient-to-b from-white to-blue-50/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">
             <span className="border-b-4 border-blue-500 pb-2">About Me</span>
           </h2>
-          
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-lg border-l-4 border-blue-500 mb-8">
-            <h3 className="text-2xl font-bold text-blue-700 mb-4">🎓 Education</h3>
-            <div className="space-y-3 text-gray-700">
-              <div>
-                <p className="font-bold">MS Biomedical and Health Informatics</p>
-                <p className="text-sm">Case Western Reserve University, School of Medicine (2023 - Present)</p>
-              </div>
-              <div>
-                <p className="font-bold">B.Eng. (Hons) Software Engineering</p>
-                <p className="text-sm">University of Westminster, UK (2015-2019) • Average: 69.25</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-gray-600 leading-relaxed">
             <p className="text-lg">
-              <span className="font-bold text-blue-600">Unique Profile:</span> I bring a rare combination of <span className="font-semibold">5+ years production engineering experience</span> and <span className="font-semibold">cutting-edge computational biology research</span>. Former Associate Technical Lead at Virtusa Corporation (NASDAQ: VRTU), where I built ML-powered platforms and microservices at scale.
+              I'm a <strong>rare hybrid</strong>: an engineer who thinks like a researcher and a researcher who builds like an engineer. With <strong>6+ years of production engineering</strong> at Fortune 500 clients and <strong>3+ years of academic research</strong> at a top medical school, I bring the best of both worlds.
             </p>
-            
-            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
-              <h3 className="text-xl font-bold text-purple-700 mb-3">🔬 Current Research @ CWRU</h3>
-              <p className="mb-3">
-                Designing production-grade <span className="font-semibold">brain MRI analysis pipelines</span> processing thousands of scans (ADNI dataset) using ANTsX ecosystem. Extracting imaging-derived phenotypes (cortical thickness, volumetrics) and integrating with GWAS data for cross-phenotype association studies in Alzheimer's Disease.
-              </p>
-              <p>
-                Pioneering <span className="font-semibold">LLM applications for genomics</span>: developed open-source <span className="font-semibold italic">embedding-quality</span> Python package for evaluating DNA language models (published in BMC Genomics, 2025).
-              </p>
-            </div>
-
-            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-green-700 mb-3">💼 Industry Impact</h3>
-              <p className="mb-2">
-                <span className="font-semibold">Associate Technical Lead</span> leading enterprise transformation projects using Spring Boot microservices, Azure Cloud, and OAuth 2.0 security.
-              </p>
-              <p className="mb-2">
-                Built <span className="font-semibold">ML-powered content classification platforms</span> for Iron Mountain (Fortune 500), processing large-scale document repositories.
-              </p>
-              <p>
-                Architected <span className="font-semibold">IoT analytics platforms</span> on AWS (Modjoul Engineering), ingesting high-frequency sensor data into real-time dashboards.
-              </p>
-            </div>
-
-            <p className="text-lg font-medium text-gray-800 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
-              🏆 <span className="font-bold">2x Product Innovation Awards</span> from Virtusa R&D for contributions to ACCELLO and CENTROID AI platforms
+            <p>
+              <strong>My Journey:</strong> Started as a software engineer building enterprise platforms (Iron Mountain, British Telecom, Modjoul). Rose to <strong>Associate Technical Lead</strong> leading R&D teams. Then pivoted to research, pursuing MS at Case Western Reserve University where I fell in love with computational neuroscience and genomics.
             </p>
-
-            <p className="text-lg">
-              <span className="font-bold text-purple-600">Seeking PhD opportunities</span> to advance AI/ML methods for computational biology, medical imaging, and precision medicine. Open to industry ML Engineer/Research Scientist roles focusing on healthcare AI, bioinformatics, or large-scale ML systems.
+            <p>
+              <strong>Current Focus:</strong> Building large-scale ML pipelines for Alzheimer's disease research—processing thousands of brain MRIs, integrating genetic data, and applying DNA language models to uncover hidden patterns in the genome. My work has been published in <em>BMC Genomics</em> and presented at ASHG.
+            </p>
+            <p>
+              <strong>What Drives Me:</strong> I believe the future of medicine lies at the intersection of AI and biology. I want to build the computational infrastructure that will enable precision medicine—systems that are not just research prototypes, but production-ready tools that clinicians and researchers can rely on.
+            </p>
+            <p className="text-lg font-medium text-gray-800">
+              Ready to make an impact in <span className="text-purple-600">computational biology</span>, <span className="text-blue-600">healthcare AI</span>, or <span className="text-green-600">large-scale ML systems</span>.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Key Highlights Section */}
-      <section id="highlights" className="py-20 px-6 bg-gradient-to-b from-blue-50/30 to-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-            <span className="border-b-4 border-blue-500 pb-2">Key Achievements & Impact</span>
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">Quantifiable results across research and industry</p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-purple-500 hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-bold text-purple-600 mb-2">1000s+</div>
-              <p className="text-sm font-semibold text-gray-700">Brain MRI Scans Processed</p>
-              <p className="text-xs text-gray-500 mt-2">ADNI dataset analysis at scale</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
-              <p className="text-sm font-semibold text-gray-700">Years Production Engineering</p>
-              <p className="text-xs text-gray-500 mt-2">Fortune 500 clients & startups</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-500 hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-bold text-green-600 mb-2">3</div>
-              <p className="text-sm font-semibold text-gray-700">Research Publications</p>
-              <p className="text-xs text-gray-500 mt-2">BMC Genomics + ASHG posters</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-orange-500 hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-bold text-orange-600 mb-2">6+</div>
-              <p className="text-sm font-semibold text-gray-700">R&D AI Products Shipped</p>
-              <p className="text-xs text-gray-500 mt-2">ACCELLO, CENTROID, LUMOS, etc.</p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border-2 border-purple-300">
-              <h3 className="text-lg font-bold text-purple-800 mb-3">🔬 Research Impact</h3>
-              <ul className="text-sm text-gray-800 space-y-2">
-                <li>✓ Published first-author BMC Genomics paper</li>
-                <li>✓ Presented at ASHG 2023 & 2024</li>
-                <li>✓ Open-source Python package released</li>
-                <li>✓ Cross-phenotype GWAS discoveries</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border-2 border-blue-300">
-              <h3 className="text-lg font-bold text-blue-800 mb-3">💼 Industry Impact</h3>
-              <ul className="text-sm text-gray-800 space-y-2">
-                <li>✓ Led teams as Associate Technical Lead</li>
-                <li>✓ Deployed ML systems to production</li>
-                <li>✓ Built microservices at scale (Azure/AWS)</li>
-                <li>✓ 2x Product Innovation Awards</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border-2 border-green-300">
-              <h3 className="text-lg font-bold text-green-800 mb-3">🛠️ Technical Skills</h3>
-              <ul className="text-sm text-gray-800 space-y-2">
-                <li>✓ Python, R, Java, Go, JavaScript</li>
-                <li>✓ PyTorch, TensorFlow, Keras</li>
-                <li>✓ AWS, Azure, GCP</li>
-                <li>✓ Docker, Kubernetes, Spark, Kafka</li>
-              </ul>
-            </div>
+          <div className="mt-12 flex flex-wrap gap-4">
+            <a
+              href="mailto:gayancwru@gmail.com"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all"
+            >
+              📧 Get in Touch
+            </a>
+            <a
+              href="/cv/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 border-gray-800 text-gray-800 font-medium rounded-lg hover:bg-gray-800 hover:text-white transition-all"
+            >
+              📄 Download CV
+            </a>
+            <a
+              href="https://scholar.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 border-purple-500 text-purple-600 font-medium rounded-lg hover:bg-purple-500 hover:text-white transition-all"
+            >
+              📚 Google Scholar
+            </a>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 border-t-2 border-purple-200 bg-gradient-to-b from-white to-purple-50/30">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
-            <span className="border-b-4 border-purple-500 pb-2">Professional Experience</span>
+      <section id="experience" className="py-24 px-6 border-t-2 border-purple-200 bg-gradient-to-b from-blue-50/30 to-purple-50/30">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-light text-gray-900 mb-16">
+            <span className="border-b-2 border-purple-500 pb-2">Experience</span>
           </h2>
           
           <div className="mb-20">
-            <h3 className="text-2xl font-bold text-purple-700 mb-8 flex items-center">
-              <span className="mr-3">🔬</span> Research Experience
-            </h3>
+            <h3 className="text-xl font-light text-purple-700 mb-8">Research Experience</h3>
             <div className="space-y-12">
               {researchExperience.map((exp, index) => (
-                <div key={index} className="border-l-4 border-purple-500 pl-8 bg-white/80 p-6 rounded-r-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="border-l-4 border-purple-500 pl-8 bg-white/50 p-4 rounded-r-lg shadow-sm">
                   <div className="mb-4">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{exp.company}</h4>
-                    <p className="text-sm text-gray-600 mb-1">📍 {exp.location}</p>
-                    <p className="text-lg font-semibold text-purple-700 mb-2">{exp.role}</p>
+                    <h4 className="text-lg font-normal text-gray-900 mb-1">{exp.company}</h4>
+                    <p className="text-sm text-gray-500 mb-1">{exp.location}</p>
+                    <p className="text-base text-gray-700 mb-2">{exp.role}</p>
                     {exp.period && (
-                      <p className="text-sm text-gray-500">📅 {exp.period}</p>
+                      <p className="text-sm text-gray-500">{exp.period}</p>
                     )}
                   </div>
-                  <ul className="space-y-3 mt-4">
+                  <ul className="space-y-2 mt-4">
                     {exp.achievements.map((achievement, aIndex) => (
-                      <li key={aIndex} className="text-sm text-gray-700 leading-relaxed flex items-start">
-                        <span className="text-purple-500 mr-2 mt-1">▸</span>
-                        <span>{achievement}</span>
+                      <li key={aIndex} className="text-sm text-gray-600 leading-relaxed">
+                        {achievement}
                       </li>
                     ))}
                   </ul>
@@ -746,54 +762,38 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-blue-700 mb-8 flex items-center">
-              <span className="mr-3">💼</span> Industry Experience
-            </h3>
-            <div className="space-y-8">
-              {professionalExperience.slice(0, 5).map((exp, index) => (
-                <div key={index} className="border-l-4 border-blue-500 pl-8 bg-white/80 p-6 rounded-r-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-light text-blue-700 mb-8">Professional Experience</h3>
+            <div className="space-y-12">
+              {professionalExperience.map((exp, index) => (
+                <div key={index} className="border-l-4 border-blue-500 pl-8 bg-white/50 p-4 rounded-r-lg shadow-sm">
                   <div className="mb-4">
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">{exp.company}</h4>
-                    <p className="text-sm text-gray-600 mb-1">📍 {exp.location}</p>
-                    <p className="text-base font-semibold text-blue-700 mb-2">{exp.role}</p>
+                    <h4 className="text-lg font-normal text-gray-900 mb-1">{exp.company}</h4>
+                    <p className="text-sm text-gray-500 mb-1">{exp.location}</p>
+                    <p className="text-base text-gray-700 mb-2">{exp.role}</p>
                     {exp.period && (
-                      <p className="text-sm text-gray-500">📅 {exp.period}</p>
+                      <p className="text-sm text-gray-500">{exp.period}</p>
                     )}
                   </div>
                   <ul className="space-y-2 mt-4">
                     {exp.achievements.map((achievement, aIndex) => (
-                      <li key={aIndex} className="text-sm text-gray-700 leading-relaxed flex items-start">
-                        <span className="text-blue-500 mr-2 mt-1">▸</span>
-                        <span>
-                          {achievement.startsWith('More info:') ? (
-                            <a 
-                              href={achievement.split('More info: ')[1]} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:underline font-medium"
-                            >
-                              {achievement}
-                            </a>
-                          ) : (
-                            achievement
-                          )}
-                        </span>
+                      <li key={aIndex} className="text-sm text-gray-600 leading-relaxed">
+                        {achievement.startsWith('More info:') ? (
+                          <a 
+                            href={achievement.split('More info: ')[1]} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-gray-900 hover:underline"
+                          >
+                            {achievement}
+                          </a>
+                        ) : (
+                          achievement
+                        )}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
-            </div>
-            
-            <div className="mt-8 text-center">
-              <a 
-                href="/cv/cv.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
-              >
-                📄 View Full Experience in CV
-              </a>
             </div>
           </div>
         </div>
@@ -904,61 +904,52 @@ export default function Home() {
 
       {/* Publications Section */}
       <section id="publications" className="py-24 px-6 border-t-2 border-indigo-200 bg-gradient-to-b from-pink-50/30 to-indigo-50/30">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-            <span className="border-b-4 border-indigo-500 pb-2">Publications & Research Output</span>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-light text-gray-900 mb-16">
+            <span className="border-b-2 border-indigo-500 pb-2">Publications</span>
           </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Peer-reviewed publications and conference presentations
-          </p>
           
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-indigo-700 mb-8 flex items-center">
-              <span className="mr-3">📚</span> Peer-Reviewed Publications
-            </h3>
+            <h3 className="text-xl font-light text-indigo-700 mb-8">Research Publications</h3>
             <div className="space-y-8">
               {publications.map((pub, index) => {
-                const bgColors = ['bg-gradient-to-r from-indigo-50 to-purple-50', 'bg-gradient-to-r from-purple-50 to-blue-50']
+                const bgColors = ['bg-indigo-50/40', 'bg-purple-50/40', 'bg-blue-50/40']
                 return (
-                <div key={index} className={`${bgColors[index % bgColors.length]} p-6 rounded-lg border-l-4 border-indigo-500 shadow-lg hover:shadow-xl transition-shadow`}>
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex-1">
-                      {pub.status === "published" && (
-                        <span className="inline-block px-3 py-1 text-xs font-bold text-green-700 bg-green-100 border-2 border-green-300 rounded-full mb-2">
-                          ✓ PUBLISHED
-                        </span>
-                      )}
-                      {pub.status === "in_progress" && (
-                        <span className="inline-block px-3 py-1 text-xs font-bold text-blue-700 bg-blue-100 border-2 border-blue-300 rounded-full mb-2">
-                          ⏳ IN PROGRESS
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{pub.title}</h4>
+                <div key={index} className={`${bgColors[index % bgColors.length]} p-4 rounded-lg border-l-4 border-indigo-500`}>
                   {pub.authors && (
-                    <p className="text-sm text-gray-700 mb-2 font-medium">{pub.authors}</p>
+                    <p className="text-sm text-gray-700 mb-2">{pub.authors}</p>
                   )}
+                  <h4 className="text-base font-normal text-gray-900 mb-2">{pub.title}</h4>
                   {pub.journal && (
-                    <p className="text-sm text-gray-600 mb-3">
-                      <span className="italic font-semibold text-indigo-700">{pub.journal}</span>
+                    <p className="text-sm text-gray-600 mb-1">
+                      <span className="italic text-indigo-700">{pub.journal}</span>
                       {pub.volume && `, vol. ${pub.volume}`}
                       {pub.issue && `, no. ${pub.issue}`}
                       {pub.pages && `, p. ${pub.pages}`}
-                      {pub.year && ` (${pub.year})`}
+                      {pub.year && `, ${pub.year}`}
                     </p>
                   )}
                   {pub.doi && (
-                    <div className="mt-3">
-                      <a 
-                        href={`https://doi.org/${pub.doi}`} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
-                      >
-                        🔗 View Publication
+                    <p className="text-sm text-gray-500 mb-2">
+                      DOI: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800 hover:underline font-medium">
+                        {pub.doi}
                       </a>
-                    </div>
+                    </p>
+                  )}
+                  {pub.status === "in_review" && (
+                    <span className="inline-block px-2 py-1 text-xs text-yellow-700 bg-yellow-100 border border-yellow-300 rounded">
+                      In Review
+                    </span>
+                  )}
+                  {pub.status === "in_progress" && (
+                    <span className="inline-block px-2 py-1 text-xs text-blue-700 bg-blue-100 border border-blue-300 rounded">
+                      In Progress
+                    </span>
+                  )}
+                  {pub.status === "published" && (
+                    <span className="inline-block px-2 py-1 text-xs text-green-700 bg-green-100 border border-green-300 rounded">
+                      Published
+                    </span>
                   )}
                 </div>
               )
@@ -967,26 +958,19 @@ export default function Home() {
           </div>
 
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-purple-700 mb-8 flex items-center">
-              <span className="mr-3">🎤</span> Conference Presentations
-            </h3>
+            <h3 className="text-xl font-light text-purple-700 mb-8">Conference Posters</h3>
             <div className="space-y-8">
               {conferencePosters.map((poster, index) => {
-                const bgColors = ['bg-gradient-to-r from-purple-50 to-pink-50', 'bg-gradient-to-r from-pink-50 to-purple-50']
+                const bgColors = ['bg-purple-50/40', 'bg-pink-50/40']
                 const borderColors = ['border-purple-500', 'border-pink-500']
                 return (
-                <div key={index} className={`${bgColors[index % bgColors.length]} p-6 rounded-lg border-l-4 ${borderColors[index % borderColors.length]} shadow-lg hover:shadow-xl transition-shadow`}>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 text-xs font-bold text-purple-700 bg-purple-100 border-2 border-purple-300 rounded-full">
-                      POSTER
-                    </span>
-                    <span className="text-sm font-bold text-purple-600">{poster.conference}</span>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{poster.title}</h4>
-                  <p className="text-sm text-gray-700 mb-2">
-                    <span className="font-semibold">Authors:</span> {poster.authors}
+                <div key={index} className={`${bgColors[index % bgColors.length]} p-4 rounded-lg border-l-4 ${borderColors[index % borderColors.length]}`}>
+                  <p className="text-sm text-purple-600 font-medium mb-2">{poster.conference}</p>
+                  <h4 className="text-base font-normal text-gray-900 mb-2">{poster.title}</h4>
+                  <p className="text-sm text-gray-600 mb-1">
+                    <span className="font-normal">Authors:</span> {poster.authors}
                   </p>
-                  <p className="text-xs text-gray-600">
+                  <p className="text-sm text-gray-500">
                     {poster.affiliation}
                   </p>
                 </div>
@@ -996,21 +980,14 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-yellow-600 mb-8 flex items-center">
-              <span className="mr-3">🏆</span> Honors & Awards
-            </h3>
+            <h3 className="text-xl font-light text-yellow-600 mb-8">Honors and Awards</h3>
             <div className="space-y-6">
               {honors.map((honor, index) => {
-                const bgColors = ['bg-gradient-to-r from-yellow-50 to-amber-50', 'bg-gradient-to-r from-amber-50 to-yellow-50']
+                const bgColors = ['bg-yellow-50/40', 'bg-amber-50/40']
                 return (
-                <div key={index} className={`${bgColors[index % bgColors.length]} p-6 rounded-lg border-l-4 border-yellow-500 shadow-lg hover:shadow-xl transition-shadow`}>
-                  <div className="flex items-start gap-3">
-                    <span className="text-3xl">🏆</span>
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-900 mb-2">{honor.title}</h4>
-                      <p className="text-sm text-gray-700">{honor.description}</p>
-                    </div>
-                  </div>
+                <div key={index} className={`${bgColors[index % bgColors.length]} p-4 rounded-lg border-l-4 border-yellow-500`}>
+                  <h4 className="text-base font-normal text-gray-900 mb-1">{honor.title}</h4>
+                  <p className="text-sm text-gray-600">{honor.description}</p>
                 </div>
               )
               })}
@@ -1019,79 +996,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Education Section */}
-      <section id="education" className="py-24 px-6 border-t-2 border-teal-200 bg-gradient-to-b from-indigo-50/30 to-teal-50/30">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-16">
-            <span className="border-b-2 border-teal-500 pb-2">Education</span>
+      {/* Teaching Section - Colorful */}
+      <section id="teaching" className="py-24 px-6 border-t-2 border-cyan-200 bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 relative overflow-hidden">
+        {/* Animated decorations */}
+        <div className="absolute top-10 right-20 w-20 h-20 bg-cyan-400/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-20 w-24 h-24 bg-purple-400/30 rounded-full blur-xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-blue-400/30 rounded-full blur-xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">Teaching & Mentorship</span>
           </h2>
-          <div className="space-y-12">
-            <div>
-              <h3 className="text-xl font-normal text-gray-900 mb-2">Case Western Reserve University, School of Medicine</h3>
-              <p className="text-base text-gray-600 mb-1">MS in Biomedical and Health Informatics</p>
-              <p className="text-sm text-gray-500 mb-4">Ohio, United States</p>
-              <p className="text-sm text-gray-600">3rd Year (In Progress)</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-normal text-gray-900 mb-2">University of Westminster</h3>
-              <p className="text-base text-gray-600 mb-1">B.Eng. (Hons) in Software Engineering</p>
-              <p className="text-sm text-gray-500 mb-4">London, United Kingdom</p>
-              <p className="text-sm text-gray-600">Sep. 2015 – Jun. 2019; Overall Avg: 69.25</p>
+          
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-cyan-200 hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-start gap-6">
+              {/* Icon */}
+              <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-4xl">👨‍🏫</span>
+              </div>
+              
+              {/* Content */}
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Visiting Lecturer</h3>
+                  <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-semibold rounded-full">Spring 2022</span>
+                </div>
+                <p className="text-lg text-gray-700 font-medium mb-1">University of Westminster</p>
+                <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                  <span>📍</span> London, United Kingdom
+                </p>
+                
+                <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-4 border-l-4 border-cyan-500">
+                  <p className="text-gray-700 leading-relaxed">
+                    Taught <strong className="text-cyan-700">Concurrent Programming</strong> and supervised final-year research projects, mentoring students on <strong className="text-blue-700">multithreading</strong>, <strong className="text-purple-700">synchronization</strong>, and applied software engineering practices.
+                  </p>
+                </div>
+                
+                {/* Skills taught */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium border border-cyan-200">🧵 Multithreading</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium border border-blue-200">🔄 Synchronization</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium border border-purple-200">⚙️ Software Engineering</span>
+                  <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium border border-pink-200">📚 Research Supervision</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Teaching Section */}
-      <section id="teaching" className="py-24 px-6 border-t-2 border-cyan-200 bg-gradient-to-b from-teal-50/30 to-cyan-50/30">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-16">
-            <span className="border-b-2 border-cyan-500 pb-2">Teaching</span>
-          </h2>
-          <div>
-            <h3 className="text-xl font-normal text-gray-900 mb-2">Visiting Lecturer</h3>
-            <p className="text-base text-gray-600 mb-1">University of Westminster</p>
-            <p className="text-sm text-gray-500 mb-4">Spring 2022, London, United Kingdom</p>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Taught Concurrent Programming and supervised final-year research projects, mentoring students on multithreading, synchronization, and applied software engineering practices.
-            </p>
-          </div>
+      {/* Skills Section - Colorful & Animated */}
+      <section id="skills" className="py-24 px-6 border-t-2 border-violet-200 bg-gradient-to-br from-violet-50 via-purple-50 to-pink-50 relative overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-violet-300/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 -right-10 w-48 h-48 bg-pink-300/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute -bottom-10 left-1/3 w-36 h-36 bg-blue-300/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
-      </section>
-
-      {/* Skills Section - ATS Optimized */}
-      <section id="skills" className="py-24 px-6 border-t-2 border-violet-200 bg-gradient-to-b from-cyan-50/30 to-violet-50/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-            <span className="border-b-4 border-violet-500 pb-2">Technical Skills & Expertise</span>
+        
+        <div className="max-w-5xl mx-auto relative z-10">
+          <h2 className="text-4xl font-bold text-center mb-4">
+            <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Technical Skills</span>
           </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Production-proven technologies across AI/ML, Cloud, and Bioinformatics
-          </p>
-
-          {/* Core Competencies - ATS Keywords */}
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg border-2 border-blue-300 mb-12 shadow-lg">
-            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">🎯 Core Competencies</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {['Machine Learning', 'Deep Learning', 'MLOps', 'Bioinformatics', 'Computational Biology', 
-                'Medical Image Analysis', 'Genomics', 'Cloud Computing', 'Microservices', 'Data Engineering',
-                'Python', 'PyTorch', 'TensorFlow', 'AWS', 'Azure', 'Docker', 'Kubernetes'].map((skill, idx) => (
-                <span key={idx} className="px-4 py-2 bg-white text-gray-800 font-semibold text-sm rounded-full border-2 border-blue-400 shadow-md hover:shadow-lg transition-shadow">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <p className="text-gray-600 text-center mb-12">Technologies I work with every day</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => {
-              const categoryColors = ['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500', 'bg-pink-500', 'bg-indigo-500', 'bg-teal-500', 'bg-cyan-500']
-              const textColors = ['text-blue-700', 'text-purple-700', 'text-green-700', 'text-orange-700', 'text-pink-700', 'text-indigo-700', 'text-teal-700', 'text-cyan-700']
+              const gradients = [
+                'from-blue-500 to-cyan-500',
+                'from-purple-500 to-pink-500', 
+                'from-green-500 to-emerald-500',
+                'from-orange-500 to-red-500',
+                'from-pink-500 to-rose-500',
+                'from-indigo-500 to-purple-500',
+                'from-teal-500 to-cyan-500',
+                'from-amber-500 to-orange-500'
+              ]
+              const bgColors = [
+                'bg-blue-50',
+                'bg-purple-50',
+                'bg-green-50',
+                'bg-orange-50',
+                'bg-pink-50',
+                'bg-indigo-50',
+                'bg-teal-50',
+                'bg-amber-50'
+              ]
+              const categoryIcons = ['💻', '📜', '🗄️', '🤖', '⚡', '☁️', '🧬', '🔧']
+              
               return (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-t-4" style={{borderTopColor: categoryColors[index % categoryColors.length].replace('bg-', '#')}}>
-                <h3 className={`text-lg font-bold ${textColors[index % textColors.length]} mb-4 flex items-center`}>
-                  <span className="mr-2">▸</span> {category.title}
-                </h3>
+              <div 
+                key={index} 
+                className={`${bgColors[index % bgColors.length]} p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-white/50`}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">{categoryIcons[index % categoryIcons.length]}</span>
+                  <h3 className={`text-lg font-bold bg-gradient-to-r ${gradients[index % gradients.length]} bg-clip-text text-transparent`}>
+                    {category.title}
+                  </h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, sIndex) => {
                     const iconData = getSkillIcon(skill)
@@ -1100,15 +1103,15 @@ export default function Home() {
                     return (
                       <span
                         key={sIndex}
-                        className="px-3 py-1.5 text-sm text-gray-700 bg-gray-50 border-2 border-gray-300 rounded-lg flex items-center gap-2 hover:border-blue-400 hover:bg-blue-50 transition-all font-medium"
+                        className="px-3 py-1.5 text-xs text-gray-700 bg-white rounded-full border border-gray-200 flex items-center gap-2 hover:shadow-md hover:border-gray-300 transition-all cursor-default group"
                       >
                         {IconComponent && (
                           <IconComponent 
-                            className="w-4 h-4" 
+                            className="w-4 h-4 group-hover:scale-110 transition-transform" 
                             style={{ color: iconColor }}
                           />
                         )}
-                        {skill}
+                        <span className="font-medium">{skill}</span>
                       </span>
                     )
                   })}
@@ -1116,29 +1119,6 @@ export default function Home() {
               </div>
             )
             })}
-          </div>
-
-          {/* Additional Technical Proficiencies */}
-          <div className="mt-12 bg-white p-8 rounded-lg shadow-lg border-l-4 border-green-500">
-            <h3 className="text-2xl font-bold text-green-700 mb-6">🔧 Additional Technical Proficiencies</h3>
-            <div className="grid md:grid-cols-2 gap-6 text-gray-700">
-              <div>
-                <p className="font-bold text-green-600 mb-2">Research & Analysis:</p>
-                <p className="text-sm">ANTsX, FreeSurfer, FSL, PLINK, CPASSOC, OMOP CDM, OHDSI Tools, Statistical Analysis, Data Visualization</p>
-              </div>
-              <div>
-                <p className="font-bold text-blue-600 mb-2">Development & DevOps:</p>
-                <p className="text-sm">CI/CD (Jenkins, GitHub Actions), Git, Agile/Scrum, Test-Driven Development, Code Review, Technical Documentation</p>
-              </div>
-              <div>
-                <p className="font-bold text-purple-600 mb-2">Soft Skills:</p>
-                <p className="text-sm">Technical Leadership, Cross-functional Collaboration, Research Communication, Mentoring, Problem Solving</p>
-              </div>
-              <div>
-                <p className="font-bold text-orange-600 mb-2">Domain Expertise:</p>
-                <p className="text-sm">Healthcare AI, Precision Medicine, Alzheimer's Disease Research, EHR Systems, Clinical Data Standards</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

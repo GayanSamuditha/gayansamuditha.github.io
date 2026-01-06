@@ -16,16 +16,12 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { href: '#about', text: 'About' },
+    { href: '#value', text: 'Why Me' },
+    { href: '#expertise', text: 'Expertise' },
     { href: '#experience', text: 'Experience' },
-    { href: '#technical-projects', text: 'Technical Projects' },
-    { href: '#projects', text: 'Projects' },
-    { href: '#research-projects', text: 'Research' },
     { href: '#publications', text: 'Publications' },
-    { href: '#education', text: 'Education' },
     { href: '#teaching', text: 'Teaching' },
     { href: '#skills', text: 'Skills' },
-    { href: '#articles', text: 'Articles' },
   ]
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -50,7 +46,7 @@ export default function Navbar() {
           <Link 
             href="#home" 
             onClick={(e) => handleNavClick(e, '#home')}
-            className="text-lg font-light bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 transition-all"
+            className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 transition-all"
           >
             Gayan Samuditha
           </Link>
