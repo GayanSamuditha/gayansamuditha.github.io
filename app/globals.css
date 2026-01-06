@@ -139,3 +139,57 @@ body {
   }
 }
 
+
+/* DNA Helix Animations */
+@keyframes dna-left {
+  0%, 100% {
+    transform: translateX(-12px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(12px) scale(0.8);
+    opacity: 0.6;
+  }
+}
+
+@keyframes dna-right {
+  0%, 100% {
+    transform: translateX(12px) scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-12px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dna-bar {
+  0%, 100% {
+    transform: scaleX(1) rotateY(0deg);
+    opacity: 0.5;
+  }
+  25% {
+    transform: scaleX(0.3) rotateY(45deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scaleX(1) rotateY(0deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scaleX(0.3) rotateY(-45deg);
+    opacity: 0.2;
+  }
+}
+
+.animate-dna-left {
+  animation: dna-left 2s ease-in-out infinite;
+}
+
+.animate-dna-right {
+  animation: dna-right 2s ease-in-out infinite;
+}
+
+.animate-dna-bar {
+  animation: dna-bar 2s ease-in-out infinite;
+}

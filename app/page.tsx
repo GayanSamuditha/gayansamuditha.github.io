@@ -447,8 +447,48 @@ export default function Home() {
     }
   ]
 
+
+  // DNA Helix Animation Component - Left Side
+  const DNAHelix = () => {
+    const basePairs = Array.from({ length: 20 }, (_, i) => i)
+    return (
+      <div className="fixed left-0 top-0 h-screen w-16 hidden lg:flex flex-col items-center justify-center pointer-events-none z-40 overflow-hidden">
+        <div className="relative h-full w-full">
+          {basePairs.map((_, index) => (
+            <div key={index} className="absolute left-1/2 -translate-x-1/2" style={{ top: `${index * 5}%` }}>
+              <div className="absolute w-3 h-3 rounded-full animate-dna-left" style={{ background: index % 4 === 0 ? '#3b82f6' : index % 4 === 1 ? '#8b5cf6' : index % 4 === 2 ? '#ec4899' : '#10b981', animationDelay: `${index * 0.15}s`, boxShadow: `0 0 10px ${index % 4 === 0 ? '#3b82f6' : index % 4 === 1 ? '#8b5cf6' : index % 4 === 2 ? '#ec4899' : '#10b981'}` }} />
+              <div className="absolute w-3 h-3 rounded-full animate-dna-right" style={{ background: index % 4 === 0 ? '#10b981' : index % 4 === 1 ? '#ec4899' : index % 4 === 2 ? '#8b5cf6' : '#3b82f6', animationDelay: `${index * 0.15}s`, boxShadow: `0 0 10px ${index % 4 === 0 ? '#10b981' : index % 4 === 1 ? '#ec4899' : index % 4 === 2 ? '#8b5cf6' : '#3b82f6'}` }} />
+              <div className="absolute h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-50 animate-dna-bar" style={{ width: '24px', left: '-12px', top: '6px', animationDelay: `${index * 0.15}s` }} />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  // DNA Helix Animation Component - Right Side
+  const DNAHelixRight = () => {
+    const basePairs = Array.from({ length: 20 }, (_, i) => i)
+    return (
+      <div className="fixed right-0 top-0 h-screen w-16 hidden lg:flex flex-col items-center justify-center pointer-events-none z-40 overflow-hidden">
+        <div className="relative h-full w-full">
+          {basePairs.map((_, index) => (
+            <div key={index} className="absolute left-1/2 -translate-x-1/2" style={{ top: `${index * 5}%` }}>
+              <div className="absolute w-3 h-3 rounded-full animate-dna-right" style={{ background: index % 4 === 0 ? '#f59e0b' : index % 4 === 1 ? '#ef4444' : index % 4 === 2 ? '#06b6d4' : '#8b5cf6', animationDelay: `${index * 0.15 + 0.5}s`, boxShadow: `0 0 10px ${index % 4 === 0 ? '#f59e0b' : index % 4 === 1 ? '#ef4444' : index % 4 === 2 ? '#06b6d4' : '#8b5cf6'}` }} />
+              <div className="absolute w-3 h-3 rounded-full animate-dna-left" style={{ background: index % 4 === 0 ? '#8b5cf6' : index % 4 === 1 ? '#06b6d4' : index % 4 === 2 ? '#ef4444' : '#f59e0b', animationDelay: `${index * 0.15 + 0.5}s`, boxShadow: `0 0 10px ${index % 4 === 0 ? '#8b5cf6' : index % 4 === 1 ? '#06b6d4' : index % 4 === 2 ? '#ef4444' : '#f59e0b'}` }} />
+              <div className="absolute h-0.5 bg-gradient-to-r from-amber-400 via-red-400 to-cyan-400 opacity-50 animate-dna-bar" style={{ width: '24px', left: '-12px', top: '6px', animationDelay: `${index * 0.15 + 0.5}s` }} />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* DNA Helix Animations */}
+      <DNAHelix />
+      <DNAHelixRight />
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
         {/* Background decoration */}
