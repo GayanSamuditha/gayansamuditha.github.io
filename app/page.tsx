@@ -409,6 +409,32 @@ export default function Home() {
     }
   ]
 
+  const impactCallouts = [
+    {
+      title: "For Hiring Teams",
+      description:
+        "Spearheaded digital transformation and platform engineering programs. Deliver production-grade microservices, ML pipelines, and distributed systems with AWS/Azure, ensuring measurable business impact.",
+      color: "from-blue-500 to-indigo-500",
+      cta: "Discuss Industry Roles",
+      href: "#experience"
+    },
+    {
+      title: "For Research Labs",
+      description:
+        "Lead translational R&D in biomedical imaging and genomics. Published peer-reviewed work, open-source tooling, and multi-cohort studies aligned with precision medicine goals.",
+      color: "from-pink-500 to-purple-500",
+      cta: "Talk PhD Opportunities",
+      href: "#research-projects"
+    }
+  ]
+
+  const impactHighlights = [
+    "50K+ MRI scans harmonized using ANTsX pipelines and OHDSI tooling for cross-cohort research.",
+    "Reduced regression QA cycle by 40% through automation platforms (ACCELLO, CENTROID, AITEST).",
+    "Deployed ML-backed content services at Virtusa/Iron Mountain powering analytics across distributed teams.",
+    "Built scalable DNA language model evaluation toolkit published as open-source for genomics labs."
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -456,6 +482,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+          <div className="grid gap-4 mt-12 md:grid-cols-2">
+            {impactCallouts.map((callout) => (
+              <div
+                key={callout.title}
+                className={`rounded-2xl p-6 text-white shadow-lg bg-gradient-to-br ${callout.color}`}
+              >
+                <h3 className="text-lg font-semibold mb-2">{callout.title}</h3>
+                <p className="text-sm leading-relaxed mb-4">{callout.description}</p>
+                <a
+                  href={callout.href}
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium bg-white text-gray-900 rounded-full hover:bg-gray-100 transition"
+                >
+                  {callout.cta}
+                </a>
+              </div>
+            ))}
+          </div>
 
       {/* About Section */}
       <section id="about" className="py-24 px-6 border-t-2 border-blue-200 bg-gradient-to-b from-white to-blue-50/30">
@@ -565,6 +609,22 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Highlights */}
+      <section className="py-16 px-6 border-t border-gray-200 bg-gradient-to-b from-white to-green-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-light text-gray-900 mb-8">
+            <span className="border-b-2 border-green-500 pb-2">Impact Highlights</span>
+          </h2>
+          <div className="grid gap-4 text-sm text-gray-700 leading-relaxed md:grid-cols-2">
+            {impactHighlights.map((item, index) => (
+              <p key={index} className="rounded-xl border-l-4 border-green-500/60 bg-white/70 p-4 shadow-sm">
+                {item}
+              </p>
+            ))}
           </div>
         </div>
       </section>
