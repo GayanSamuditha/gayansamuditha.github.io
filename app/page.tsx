@@ -281,16 +281,26 @@ export default function Home() {
 
   const conferencePosters = [
     {
-      conference: "ASHG 2023 Poster",
-      title: "Towards a Comprehensive Electronic Phenotyping in the UK Biobank: Initial Steps using the OMOP CDM, Delphyne, and OHDSI Tools",
-      authors: "Diya Yang, Gayan Samuditha Mend Mend Arachchige, William S. Bush, PhD",
-      affiliation: "Department of Population and Quantitative Health Sciences, School of Medicine, Case Western Reserve University, OH, USA"
-    },
-    {
-      conference: "ASHG 2024 Poster",
+      conference: "ASHG 2024",
       title: "Cross-Phenotype Genome-Wide Association Study of Brain Morphology Features Extracted from Brain MRI Images",
       authors: "Gayan Samuditha Mend Mend Arachchige, Raghav Awasthi, PhD, Xiaofeng Zhu, PhD",
-      affiliation: "Department of Population and Quantitative Health Sciences, School of Medicine, Case Western Reserve University, Cleveland, OH, USA"
+      affiliation: "Department of Population and Quantitative Health Sciences, School of Medicine, Case Western Reserve University, Cleveland, OH, USA",
+      highlights: ["ADNI MRI Dataset (1531 subjects)", "ANTsPyNet Cortical Thickness Pipeline", "Cross-phenotype GWAS analysis", "Brain morphology features extraction"],
+      methods: ["T1/T2 Weighted MRI Processing", "Deep Learning Brain Extraction", "Cortical Parcellation (DKT Protocol)", "Hierarchical Clustering"],
+      color: "from-blue-500 to-purple-600",
+      bgColor: "bg-gradient-to-br from-blue-50 to-purple-50",
+      icon: "🧠"
+    },
+    {
+      conference: "ASHG 2023",
+      title: "Towards a Comprehensive Electronic Phenotyping in the UK Biobank: Initial Steps using the OMOP CDM, Delphyne, and OHDSI Tools",
+      authors: "Diya Yang, Gayan Samuditha Mend Mend Arachchige, William S. Bush, PhD",
+      affiliation: "Department of Population and Quantitative Health Sciences, School of Medicine, Case Western Reserve University, OH, USA",
+      highlights: ["UK Biobank (502,513 individuals)", "OMOP Common Data Model", "OHDSI Broadsea Integration", "6.4M+ concepts mapped"],
+      methods: ["Delphyne ETL Framework", "Docker Containerization", "PostgreSQL Database", "Atlas Web Platform"],
+      color: "from-emerald-500 to-teal-600",
+      bgColor: "bg-gradient-to-br from-emerald-50 to-teal-50",
+      icon: "🧬"
     }
   ]
 
@@ -1011,24 +1021,66 @@ export default function Home() {
           </div>
 
           <div className="mb-16">
-            <h3 className="text-xl font-light text-purple-700 mb-8">Conference Posters</h3>
-            <div className="space-y-8">
-              {conferencePosters.map((poster, index) => {
-                const bgColors = ['bg-purple-50/40', 'bg-pink-50/40']
-                const borderColors = ['border-purple-500', 'border-pink-500']
-                return (
-                <div key={index} className={`${bgColors[index % bgColors.length]} p-4 rounded-lg border-l-4 ${borderColors[index % borderColors.length]}`}>
-                  <p className="text-sm text-purple-600 font-medium mb-2">{poster.conference}</p>
-                  <h4 className="text-base font-normal text-gray-900 mb-2">{poster.title}</h4>
-                  <p className="text-sm text-gray-600 mb-1">
-                    <span className="font-normal">Authors:</span> {poster.authors}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {poster.affiliation}
-                  </p>
+            <h3 className="text-2xl font-bold text-center mb-4">
+              <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">🎯 Featured Research Posters</span>
+            </h3>
+            <p className="text-gray-600 text-center mb-10">Presented at American Society of Human Genetics (ASHG) Annual Meetings</p>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {conferencePosters.map((poster, index) => (
+                <div 
+                  key={index} 
+                  className={`${poster.bgColor} rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/50`}
+                >
+                  {/* Header with gradient */}
+                  <div className={`bg-gradient-to-r ${poster.color} p-6 text-white relative overflow-hidden`}>
+                    <div className="absolute top-0 right-0 text-8xl opacity-20 -mr-4 -mt-4">{poster.icon}</div>
+                    <span className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">
+                      {poster.conference}
+                    </span>
+                    <h4 className="text-lg font-bold leading-tight relative z-10">{poster.title}</h4>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6">
+                    {/* Authors */}
+                    <div className="mb-4">
+                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Authors</p>
+                      <p className="text-sm text-gray-700 font-medium">{poster.authors}</p>
+                    </div>
+                    
+                    {/* Affiliation */}
+                    <div className="mb-4">
+                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Institution</p>
+                      <p className="text-sm text-gray-600">{poster.affiliation}</p>
+                    </div>
+                    
+                    {/* Key Highlights */}
+                    <div className="mb-4">
+                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">Key Highlights</p>
+                      <div className="flex flex-wrap gap-2">
+                        {poster.highlights.map((highlight, hIdx) => (
+                          <span key={hIdx} className="px-2 py-1 bg-white rounded-lg text-xs text-gray-700 border border-gray-200 shadow-sm">
+                            ✨ {highlight}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Methods/Tools */}
+                    <div>
+                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">Methods & Tools</p>
+                      <div className="flex flex-wrap gap-2">
+                        {poster.methods.map((method, mIdx) => (
+                          <span key={mIdx} className={`px-2 py-1 rounded-lg text-xs font-medium ${index === 0 ? 'bg-blue-100 text-blue-700' : 'bg-emerald-100 text-emerald-700'}`}>
+                            {method}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              )
-              })}
+              ))}
             </div>
           </div>
 
