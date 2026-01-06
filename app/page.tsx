@@ -409,48 +409,58 @@ export default function Home() {
     }
   ]
 
-  const impactCallouts = [
-    {
-      title: "For Hiring Teams",
-      description:
-        "Spearheaded digital transformation and platform engineering programs. Deliver production-grade microservices, ML pipelines, and distributed systems with AWS/Azure, ensuring measurable business impact.",
-      color: "from-blue-500 to-indigo-500",
-      cta: "Discuss Industry Roles",
-      href: "#experience"
-    },
-    {
-      title: "For Research Labs",
-      description:
-        "Lead translational R&D in biomedical imaging and genomics. Published peer-reviewed work, open-source tooling, and multi-cohort studies aligned with precision medicine goals.",
-      color: "from-pink-500 to-purple-500",
-      cta: "Talk PhD Opportunities",
-      href: "#research-projects"
-    }
-  ]
-
-  const impactHighlights = [
-    "50K+ MRI scans harmonized using ANTsX pipelines and OHDSI tooling for cross-cohort research.",
-    "Reduced regression QA cycle by 40% through automation platforms (ACCELLO, CENTROID, AITEST).",
-    "Deployed ML-backed content services at Virtusa/Iron Mountain powering analytics across distributed teams.",
-    "Built scalable DNA language model evaluation toolkit published as open-source for genomics labs."
-  ]
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
                 Gayan Samuditha
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 font-light">
-                Masters Research in <span className="text-blue-600">Biomedical</span> and <span className="text-purple-600">Health Informatics</span>
+          <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+                AI/ML Engineer × Computational Biology Researcher
           </p>
-          <p className="text-lg text-gray-600 mb-12 font-light">
-                Case Western Reserve University, School of Medicine
+          <p className="text-xl text-gray-700 mb-4 font-medium">
+                MS Biomedical & Health Informatics | Case Western Reserve University
           </p>
           
-          <div className="flex justify-center gap-6 mb-16">
+          {/* Key Value Propositions */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto my-12">
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-blue-300 shadow-lg">
+              <h3 className="text-lg font-bold text-blue-700 mb-3">🏢 For Industry</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                5+ years building production ML systems • Former Associate Technical Lead • Shipped ML pipelines at scale • Expert in MLOps, Cloud (AWS/Azure/GCP), Microservices
+              </p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-purple-300 shadow-lg">
+              <h3 className="text-lg font-bold text-purple-700 mb-3">🎓 For Academia</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Published in BMC Genomics • ASHG presenter • Neuroimaging + Genomics expertise • Deep Learning for Healthcare • Seeking PhD opportunities
+              </p>
+            </div>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="flex flex-wrap justify-center gap-8 mb-12 text-center">
+            <div>
+              <p className="text-3xl font-bold text-blue-600">5+</p>
+              <p className="text-sm text-gray-600">Years Industry</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-purple-600">3</p>
+              <p className="text-sm text-gray-600">Publications</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-green-600">10+</p>
+              <p className="text-sm text-gray-600">Tech Stack</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-orange-600">2</p>
+              <p className="text-sm text-gray-600">Innovation Awards</p>
+            </div>
+          </div>
+          
+          <div className="flex justify-center gap-6 mb-8">
             {socialLinks.map((social, idx) => {
                   const Icon = social.icon
                   const colors = ['text-blue-500', 'text-gray-800', 'text-blue-600', 'text-red-500', 'text-pink-500']
@@ -463,110 +473,270 @@ export default function Home() {
                   className={`${colors[idx % colors.length]} hover:scale-110 transition-transform`}
                       aria-label={social.text}
                 >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-6 h-6" />
                     </a>
                   )
                 })}
           </div>
 
-          <div className="space-y-2 text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
-            <p>
-              Former Associate Technical Lead R&D and Platform engineering, and currently an AI Engineer, Ph.D. candidate in Biomedical and Health Informatics. I design and ship end-to-end data and ML pipelines across cloud and HPC for Large-Scale Neuro-imaging and Imaging Genomics of Alzheimer's Disease, LLM-based Modeling of Omics data, and ML-powered content platforms.
+          <div className="space-y-4 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg font-medium">
+              <span className="font-bold text-blue-600">Industry-Proven Engineer</span> turned <span className="font-bold text-purple-600">AI Researcher</span> specializing in <span className="font-semibold">Computational Biology, Medical Imaging, and Large-Scale ML Systems</span>
             </p>
-            <p>
-              Strong track record in Distributed Systems and MLOps, taking models from research prototypes to reliable, observable production services.
-            </p>
-          </div>
-          <div className="mt-8 text-sm text-gray-500 font-light">
-            <p>gayancwru@gmail.com</p>
-          </div>
-        </div>
-      </section>
-
-          <div className="grid gap-4 mt-12 md:grid-cols-2">
-            {impactCallouts.map((callout) => (
-              <div
-                key={callout.title}
-                className={`rounded-2xl p-6 text-white shadow-lg bg-gradient-to-br ${callout.color}`}
-              >
-                <h3 className="text-lg font-semibold mb-2">{callout.title}</h3>
-                <p className="text-sm leading-relaxed mb-4">{callout.description}</p>
-                <a
-                  href={callout.href}
-                  className="inline-flex items-center px-4 py-2 text-sm font-medium bg-white text-gray-900 rounded-full hover:bg-gray-100 transition"
-                >
-                  {callout.cta}
-                </a>
-              </div>
-            ))}
-          </div>
-
-      {/* About Section */}
-      <section id="about" className="py-24 px-6 border-t-2 border-blue-200 bg-gradient-to-b from-white to-blue-50/30">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-12">
-            <span className="border-b-2 border-blue-500 pb-2">About</span>
-          </h2>
-          <div className="space-y-6 text-gray-600 leading-relaxed font-light">
-            <p>
-              I am currently pursuing MS in Biomedical and Health Informatics (3rd Year, In Progress) at Case Western Reserve University, School of Medicine. I hold a B.Eng. (Hons) in Software Engineering from the University of Westminster, United Kingdom (Sep. 2015 – Jun. 2019), with an Overall Average of 69.25.
-            </p>
-            <p>
-              With over five years of extensive involvement in research across both industrial and academic settings, I have developed deep expertise that bridges hands-on industry applications and advanced academic studies. My professional journey includes significant roles as an Associate Lead Software Engineer, where I honed my skills in engineering research and development, platform engineering, and product development.
-            </p>
-            <p>
-              My research at Case Western Reserve University focuses on large-scale neuroimaging and imaging genomics of Alzheimer's Disease. I work on designing comprehensive brain MRI analysis pipelines using the Advanced Normalization Tools (ANTsX Ecosystem), focusing on Longitudinal Image Registration, Deep Learning-based Brain Extraction, Tissue Segmentation, Cortical Thickness measurement, and Cortical Parcellation to extract Imaging-derived Phenotypes (IDPs) from ADNI MRI data.
-            </p>
-            <p>
-              I also pioneer the application of Large Language Models (LLMs) and Deep Representation Learning to omics data, focusing on enhancing variant interpretation, uncovering hidden genetic patterns influencing brain morphology, and advancing personalized medicine through the integration of Neuro-Imaging and genomic data at scale.
-            </p>
-            <p>
-              I am always open to discussing potential collaborations, research opportunities, or queries related to my field of expertise. With a solid foundation of knowledge and a dynamic set of skills, I am eager to contribute to and collaborate on innovative ventures that push the boundaries of technology and science.
+            <p className="text-base">
+              Unique blend: Production ML engineering (MLOps, Distributed Systems, Cloud) + Cutting-edge research (Neuroimaging, Genomics, LLMs for Omics). Bridge between research innovation and real-world deployment.
             </p>
           </div>
-          <div className="mt-12 flex gap-4">
+          
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="mailto:gayancwru@gmail.com"
-              className="px-6 py-2 bg-blue-600 text-white hover:bg-blue-700 transition-colors font-light shadow-md hover:shadow-lg"
+              className="px-8 py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl rounded-lg"
             >
-              Contact
+              📧 Contact Me
             </a>
             <a
               href="/cv/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 border-2 border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white transition-colors font-light"
+              className="px-8 py-3 border-2 border-purple-600 text-purple-700 font-semibold hover:bg-purple-600 hover:text-white transition-colors rounded-lg"
             >
-              CV
+              📄 Download CV
+            </a>
+            <a
+              href="#publications"
+              onClick={(e) => handleNavClick(e, '#publications')}
+              className="px-8 py-3 border-2 border-green-600 text-green-700 font-semibold hover:bg-green-600 hover:text-white transition-colors rounded-lg"
+            >
+              📚 Publications
             </a>
           </div>
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 border-t-2 border-purple-200 bg-gradient-to-b from-blue-50/30 to-purple-50/30">
+      {/* Research Interests & Expertise Section */}
+      <section id="research-interests" className="py-20 px-6 bg-gradient-to-b from-purple-50/30 to-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+            <span className="border-b-4 border-purple-500 pb-2">Research Interests & Expertise</span>
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">
+            Bridging AI/ML Engineering with Computational Biology & Healthcare
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white p-6 rounded-lg border-l-4 border-blue-500 shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-blue-700 mb-3">🧠 Neuroimaging & Genomics</h3>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Large-scale brain MRI analysis (ANTsX, FreeSurfer)</li>
+                <li>• Imaging-derived phenotypes (IDPs)</li>
+                <li>• Cross-phenotype GWAS</li>
+                <li>• Alzheimer's Disease research</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg border-l-4 border-purple-500 shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-purple-700 mb-3">🤖 AI/ML for Healthcare</h3>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Deep Learning for medical imaging</li>
+                <li>• LLMs for omics sequence modeling</li>
+                <li>• Electronic phenotyping (OMOP CDM)</li>
+                <li>• Precision medicine applications</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-green-700 mb-3">⚙️ Production ML Systems</h3>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• MLOps & model deployment</li>
+                <li>• Distributed systems (Spark, Kafka)</li>
+                <li>• Cloud infrastructure (AWS/Azure/GCP)</li>
+                <li>• Scalable data pipelines</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg border-2 border-purple-300">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Seeking PhD Opportunities In:</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-800">
+              <div>
+                <p className="font-semibold text-blue-700 mb-2">Research Areas:</p>
+                <ul className="text-sm space-y-1">
+                  <li>✓ Computational Biology & Bioinformatics</li>
+                  <li>✓ Medical Image Analysis & Computer Vision</li>
+                  <li>✓ Deep Learning for Healthcare</li>
+                  <li>✓ Genomics & Precision Medicine</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-purple-700 mb-2">Technical Focus:</p>
+                <ul className="text-sm space-y-1">
+                  <li>✓ Large-scale data processing & HPC</li>
+                  <li>✓ Foundation models for biology</li>
+                  <li>✓ Multi-modal learning (imaging + genomics)</li>
+                  <li>✓ Translational AI research</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-6 border-t-2 border-blue-200 bg-gradient-to-b from-white to-blue-50/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-16">
-            <span className="border-b-2 border-purple-500 pb-2">Experience</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            <span className="border-b-4 border-blue-500 pb-2">About Me</span>
+          </h2>
+          
+          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-lg border-l-4 border-blue-500 mb-8">
+            <h3 className="text-2xl font-bold text-blue-700 mb-4">🎓 Education</h3>
+            <div className="space-y-3 text-gray-700">
+              <div>
+                <p className="font-bold">MS Biomedical and Health Informatics</p>
+                <p className="text-sm">Case Western Reserve University, School of Medicine (2023 - Present)</p>
+              </div>
+              <div>
+                <p className="font-bold">B.Eng. (Hons) Software Engineering</p>
+                <p className="text-sm">University of Westminster, UK (2015-2019) • Average: 69.25</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6 text-gray-700 leading-relaxed">
+            <p className="text-lg">
+              <span className="font-bold text-blue-600">Unique Profile:</span> I bring a rare combination of <span className="font-semibold">5+ years production engineering experience</span> and <span className="font-semibold">cutting-edge computational biology research</span>. Former Associate Technical Lead at Virtusa Corporation (NASDAQ: VRTU), where I built ML-powered platforms and microservices at scale.
+            </p>
+            
+            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+              <h3 className="text-xl font-bold text-purple-700 mb-3">🔬 Current Research @ CWRU</h3>
+              <p className="mb-3">
+                Designing production-grade <span className="font-semibold">brain MRI analysis pipelines</span> processing thousands of scans (ADNI dataset) using ANTsX ecosystem. Extracting imaging-derived phenotypes (cortical thickness, volumetrics) and integrating with GWAS data for cross-phenotype association studies in Alzheimer's Disease.
+              </p>
+              <p>
+                Pioneering <span className="font-semibold">LLM applications for genomics</span>: developed open-source <span className="font-semibold italic">embedding-quality</span> Python package for evaluating DNA language models (published in BMC Genomics, 2025).
+              </p>
+            </div>
+
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <h3 className="text-xl font-bold text-green-700 mb-3">💼 Industry Impact</h3>
+              <p className="mb-2">
+                <span className="font-semibold">Associate Technical Lead</span> leading enterprise transformation projects using Spring Boot microservices, Azure Cloud, and OAuth 2.0 security.
+              </p>
+              <p className="mb-2">
+                Built <span className="font-semibold">ML-powered content classification platforms</span> for Iron Mountain (Fortune 500), processing large-scale document repositories.
+              </p>
+              <p>
+                Architected <span className="font-semibold">IoT analytics platforms</span> on AWS (Modjoul Engineering), ingesting high-frequency sensor data into real-time dashboards.
+              </p>
+            </div>
+
+            <p className="text-lg font-medium text-gray-800 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+              🏆 <span className="font-bold">2x Product Innovation Awards</span> from Virtusa R&D for contributions to ACCELLO and CENTROID AI platforms
+            </p>
+
+            <p className="text-lg">
+              <span className="font-bold text-purple-600">Seeking PhD opportunities</span> to advance AI/ML methods for computational biology, medical imaging, and precision medicine. Open to industry ML Engineer/Research Scientist roles focusing on healthcare AI, bioinformatics, or large-scale ML systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Highlights Section */}
+      <section id="highlights" className="py-20 px-6 bg-gradient-to-b from-blue-50/30 to-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+            <span className="border-b-4 border-blue-500 pb-2">Key Achievements & Impact</span>
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Quantifiable results across research and industry</p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-purple-500 hover:shadow-xl transition-shadow">
+              <div className="text-4xl font-bold text-purple-600 mb-2">1000s+</div>
+              <p className="text-sm font-semibold text-gray-700">Brain MRI Scans Processed</p>
+              <p className="text-xs text-gray-500 mt-2">ADNI dataset analysis at scale</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
+              <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
+              <p className="text-sm font-semibold text-gray-700">Years Production Engineering</p>
+              <p className="text-xs text-gray-500 mt-2">Fortune 500 clients & startups</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-500 hover:shadow-xl transition-shadow">
+              <div className="text-4xl font-bold text-green-600 mb-2">3</div>
+              <p className="text-sm font-semibold text-gray-700">Research Publications</p>
+              <p className="text-xs text-gray-500 mt-2">BMC Genomics + ASHG posters</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-orange-500 hover:shadow-xl transition-shadow">
+              <div className="text-4xl font-bold text-orange-600 mb-2">6+</div>
+              <p className="text-sm font-semibold text-gray-700">R&D AI Products Shipped</p>
+              <p className="text-xs text-gray-500 mt-2">ACCELLO, CENTROID, LUMOS, etc.</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border-2 border-purple-300">
+              <h3 className="text-lg font-bold text-purple-800 mb-3">🔬 Research Impact</h3>
+              <ul className="text-sm text-gray-800 space-y-2">
+                <li>✓ Published first-author BMC Genomics paper</li>
+                <li>✓ Presented at ASHG 2023 & 2024</li>
+                <li>✓ Open-source Python package released</li>
+                <li>✓ Cross-phenotype GWAS discoveries</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border-2 border-blue-300">
+              <h3 className="text-lg font-bold text-blue-800 mb-3">💼 Industry Impact</h3>
+              <ul className="text-sm text-gray-800 space-y-2">
+                <li>✓ Led teams as Associate Technical Lead</li>
+                <li>✓ Deployed ML systems to production</li>
+                <li>✓ Built microservices at scale (Azure/AWS)</li>
+                <li>✓ 2x Product Innovation Awards</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border-2 border-green-300">
+              <h3 className="text-lg font-bold text-green-800 mb-3">🛠️ Technical Skills</h3>
+              <ul className="text-sm text-gray-800 space-y-2">
+                <li>✓ Python, R, Java, Go, JavaScript</li>
+                <li>✓ PyTorch, TensorFlow, Keras</li>
+                <li>✓ AWS, Azure, GCP</li>
+                <li>✓ Docker, Kubernetes, Spark, Kafka</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-24 px-6 border-t-2 border-purple-200 bg-gradient-to-b from-white to-purple-50/30">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
+            <span className="border-b-4 border-purple-500 pb-2">Professional Experience</span>
           </h2>
           
           <div className="mb-20">
-            <h3 className="text-xl font-light text-purple-700 mb-8">Research Experience</h3>
+            <h3 className="text-2xl font-bold text-purple-700 mb-8 flex items-center">
+              <span className="mr-3">🔬</span> Research Experience
+            </h3>
             <div className="space-y-12">
               {researchExperience.map((exp, index) => (
-                <div key={index} className="border-l-4 border-purple-500 pl-8 bg-white/50 p-4 rounded-r-lg shadow-sm">
+                <div key={index} className="border-l-4 border-purple-500 pl-8 bg-white/80 p-6 rounded-r-lg shadow-lg hover:shadow-xl transition-shadow">
                   <div className="mb-4">
-                    <h4 className="text-lg font-normal text-gray-900 mb-1">{exp.company}</h4>
-                    <p className="text-sm text-gray-500 mb-1">{exp.location}</p>
-                    <p className="text-base text-gray-700 mb-2">{exp.role}</p>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">{exp.company}</h4>
+                    <p className="text-sm text-gray-600 mb-1">📍 {exp.location}</p>
+                    <p className="text-lg font-semibold text-purple-700 mb-2">{exp.role}</p>
                     {exp.period && (
-                      <p className="text-sm text-gray-500">{exp.period}</p>
+                      <p className="text-sm text-gray-500">📅 {exp.period}</p>
                     )}
                   </div>
-                  <ul className="space-y-2 mt-4">
+                  <ul className="space-y-3 mt-4">
                     {exp.achievements.map((achievement, aIndex) => (
-                      <li key={aIndex} className="text-sm text-gray-600 leading-relaxed">
-                        {achievement}
+                      <li key={aIndex} className="text-sm text-gray-700 leading-relaxed flex items-start">
+                        <span className="text-purple-500 mr-2 mt-1">▸</span>
+                        <span>{achievement}</span>
                       </li>
                     ))}
                   </ul>
@@ -576,55 +746,55 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-xl font-light text-blue-700 mb-8">Professional Experience</h3>
-            <div className="space-y-12">
-              {professionalExperience.map((exp, index) => (
-                <div key={index} className="border-l-4 border-blue-500 pl-8 bg-white/50 p-4 rounded-r-lg shadow-sm">
+            <h3 className="text-2xl font-bold text-blue-700 mb-8 flex items-center">
+              <span className="mr-3">💼</span> Industry Experience
+            </h3>
+            <div className="space-y-8">
+              {professionalExperience.slice(0, 5).map((exp, index) => (
+                <div key={index} className="border-l-4 border-blue-500 pl-8 bg-white/80 p-6 rounded-r-lg shadow-lg hover:shadow-xl transition-shadow">
                   <div className="mb-4">
-                    <h4 className="text-lg font-normal text-gray-900 mb-1">{exp.company}</h4>
-                    <p className="text-sm text-gray-500 mb-1">{exp.location}</p>
-                    <p className="text-base text-gray-700 mb-2">{exp.role}</p>
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">{exp.company}</h4>
+                    <p className="text-sm text-gray-600 mb-1">📍 {exp.location}</p>
+                    <p className="text-base font-semibold text-blue-700 mb-2">{exp.role}</p>
                     {exp.period && (
-                      <p className="text-sm text-gray-500">{exp.period}</p>
+                      <p className="text-sm text-gray-500">📅 {exp.period}</p>
                     )}
                   </div>
                   <ul className="space-y-2 mt-4">
                     {exp.achievements.map((achievement, aIndex) => (
-                      <li key={aIndex} className="text-sm text-gray-600 leading-relaxed">
-                        {achievement.startsWith('More info:') ? (
-                          <a 
-                            href={achievement.split('More info: ')[1]} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-gray-900 hover:underline"
-                          >
-                            {achievement}
-                          </a>
-                        ) : (
-                          achievement
-                        )}
+                      <li key={aIndex} className="text-sm text-gray-700 leading-relaxed flex items-start">
+                        <span className="text-blue-500 mr-2 mt-1">▸</span>
+                        <span>
+                          {achievement.startsWith('More info:') ? (
+                            <a 
+                              href={achievement.split('More info: ')[1]} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline font-medium"
+                            >
+                              {achievement}
+                            </a>
+                          ) : (
+                            achievement
+                          )}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Highlights */}
-      <section className="py-16 px-6 border-t border-gray-200 bg-gradient-to-b from-white to-green-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-8">
-            <span className="border-b-2 border-green-500 pb-2">Impact Highlights</span>
-          </h2>
-          <div className="grid gap-4 text-sm text-gray-700 leading-relaxed md:grid-cols-2">
-            {impactHighlights.map((item, index) => (
-              <p key={index} className="rounded-xl border-l-4 border-green-500/60 bg-white/70 p-4 shadow-sm">
-                {item}
-              </p>
-            ))}
+            
+            <div className="mt-8 text-center">
+              <a 
+                href="/cv/cv.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+              >
+                📄 View Full Experience in CV
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -734,52 +904,61 @@ export default function Home() {
 
       {/* Publications Section */}
       <section id="publications" className="py-24 px-6 border-t-2 border-indigo-200 bg-gradient-to-b from-pink-50/30 to-indigo-50/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-16">
-            <span className="border-b-2 border-indigo-500 pb-2">Publications</span>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+            <span className="border-b-4 border-indigo-500 pb-2">Publications & Research Output</span>
           </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">
+            Peer-reviewed publications and conference presentations
+          </p>
           
           <div className="mb-16">
-            <h3 className="text-xl font-light text-indigo-700 mb-8">Research Publications</h3>
+            <h3 className="text-2xl font-bold text-indigo-700 mb-8 flex items-center">
+              <span className="mr-3">📚</span> Peer-Reviewed Publications
+            </h3>
             <div className="space-y-8">
               {publications.map((pub, index) => {
-                const bgColors = ['bg-indigo-50/40', 'bg-purple-50/40', 'bg-blue-50/40']
+                const bgColors = ['bg-gradient-to-r from-indigo-50 to-purple-50', 'bg-gradient-to-r from-purple-50 to-blue-50']
                 return (
-                <div key={index} className={`${bgColors[index % bgColors.length]} p-4 rounded-lg border-l-4 border-indigo-500`}>
+                <div key={index} className={`${bgColors[index % bgColors.length]} p-6 rounded-lg border-l-4 border-indigo-500 shadow-lg hover:shadow-xl transition-shadow`}>
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex-1">
+                      {pub.status === "published" && (
+                        <span className="inline-block px-3 py-1 text-xs font-bold text-green-700 bg-green-100 border-2 border-green-300 rounded-full mb-2">
+                          ✓ PUBLISHED
+                        </span>
+                      )}
+                      {pub.status === "in_progress" && (
+                        <span className="inline-block px-3 py-1 text-xs font-bold text-blue-700 bg-blue-100 border-2 border-blue-300 rounded-full mb-2">
+                          ⏳ IN PROGRESS
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{pub.title}</h4>
                   {pub.authors && (
-                    <p className="text-sm text-gray-700 mb-2">{pub.authors}</p>
+                    <p className="text-sm text-gray-700 mb-2 font-medium">{pub.authors}</p>
                   )}
-                  <h4 className="text-base font-normal text-gray-900 mb-2">{pub.title}</h4>
                   {pub.journal && (
-                    <p className="text-sm text-gray-600 mb-1">
-                      <span className="italic text-indigo-700">{pub.journal}</span>
+                    <p className="text-sm text-gray-600 mb-3">
+                      <span className="italic font-semibold text-indigo-700">{pub.journal}</span>
                       {pub.volume && `, vol. ${pub.volume}`}
                       {pub.issue && `, no. ${pub.issue}`}
                       {pub.pages && `, p. ${pub.pages}`}
-                      {pub.year && `, ${pub.year}`}
+                      {pub.year && ` (${pub.year})`}
                     </p>
                   )}
                   {pub.doi && (
-                    <p className="text-sm text-gray-500 mb-2">
-                      DOI: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800 hover:underline font-medium">
-                        {pub.doi}
+                    <div className="mt-3">
+                      <a 
+                        href={`https://doi.org/${pub.doi}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
+                      >
+                        🔗 View Publication
                       </a>
-                    </p>
-                  )}
-                  {pub.status === "in_review" && (
-                    <span className="inline-block px-2 py-1 text-xs text-yellow-700 bg-yellow-100 border border-yellow-300 rounded">
-                      In Review
-                    </span>
-                  )}
-                  {pub.status === "in_progress" && (
-                    <span className="inline-block px-2 py-1 text-xs text-blue-700 bg-blue-100 border border-blue-300 rounded">
-                      In Progress
-                    </span>
-                  )}
-                  {pub.status === "published" && (
-                    <span className="inline-block px-2 py-1 text-xs text-green-700 bg-green-100 border border-green-300 rounded">
-                      Published
-                    </span>
+                    </div>
                   )}
                 </div>
               )
@@ -788,19 +967,26 @@ export default function Home() {
           </div>
 
           <div className="mb-16">
-            <h3 className="text-xl font-light text-purple-700 mb-8">Conference Posters</h3>
+            <h3 className="text-2xl font-bold text-purple-700 mb-8 flex items-center">
+              <span className="mr-3">🎤</span> Conference Presentations
+            </h3>
             <div className="space-y-8">
               {conferencePosters.map((poster, index) => {
-                const bgColors = ['bg-purple-50/40', 'bg-pink-50/40']
+                const bgColors = ['bg-gradient-to-r from-purple-50 to-pink-50', 'bg-gradient-to-r from-pink-50 to-purple-50']
                 const borderColors = ['border-purple-500', 'border-pink-500']
                 return (
-                <div key={index} className={`${bgColors[index % bgColors.length]} p-4 rounded-lg border-l-4 ${borderColors[index % borderColors.length]}`}>
-                  <p className="text-sm text-purple-600 font-medium mb-2">{poster.conference}</p>
-                  <h4 className="text-base font-normal text-gray-900 mb-2">{poster.title}</h4>
-                  <p className="text-sm text-gray-600 mb-1">
-                    <span className="font-normal">Authors:</span> {poster.authors}
+                <div key={index} className={`${bgColors[index % bgColors.length]} p-6 rounded-lg border-l-4 ${borderColors[index % borderColors.length]} shadow-lg hover:shadow-xl transition-shadow`}>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 text-xs font-bold text-purple-700 bg-purple-100 border-2 border-purple-300 rounded-full">
+                      POSTER
+                    </span>
+                    <span className="text-sm font-bold text-purple-600">{poster.conference}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{poster.title}</h4>
+                  <p className="text-sm text-gray-700 mb-2">
+                    <span className="font-semibold">Authors:</span> {poster.authors}
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-xs text-gray-600">
                     {poster.affiliation}
                   </p>
                 </div>
@@ -810,14 +996,21 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-xl font-light text-yellow-600 mb-8">Honors and Awards</h3>
+            <h3 className="text-2xl font-bold text-yellow-600 mb-8 flex items-center">
+              <span className="mr-3">🏆</span> Honors & Awards
+            </h3>
             <div className="space-y-6">
               {honors.map((honor, index) => {
-                const bgColors = ['bg-yellow-50/40', 'bg-amber-50/40']
+                const bgColors = ['bg-gradient-to-r from-yellow-50 to-amber-50', 'bg-gradient-to-r from-amber-50 to-yellow-50']
                 return (
-                <div key={index} className={`${bgColors[index % bgColors.length]} p-4 rounded-lg border-l-4 border-yellow-500`}>
-                  <h4 className="text-base font-normal text-gray-900 mb-1">{honor.title}</h4>
-                  <p className="text-sm text-gray-600">{honor.description}</p>
+                <div key={index} className={`${bgColors[index % bgColors.length]} p-6 rounded-lg border-l-4 border-yellow-500 shadow-lg hover:shadow-xl transition-shadow`}>
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">🏆</span>
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">{honor.title}</h4>
+                      <p className="text-sm text-gray-700">{honor.description}</p>
+                    </div>
+                  </div>
                 </div>
               )
               })}
@@ -866,20 +1059,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Skills Section - ATS Optimized */}
       <section id="skills" className="py-24 px-6 border-t-2 border-violet-200 bg-gradient-to-b from-cyan-50/30 to-violet-50/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-16">
-            <span className="border-b-2 border-violet-500 pb-2">Skills</span>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+            <span className="border-b-4 border-violet-500 pb-2">Technical Skills & Expertise</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <p className="text-center text-gray-600 mb-12 text-lg">
+            Production-proven technologies across AI/ML, Cloud, and Bioinformatics
+          </p>
+
+          {/* Core Competencies - ATS Keywords */}
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg border-2 border-blue-300 mb-12 shadow-lg">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">🎯 Core Competencies</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {['Machine Learning', 'Deep Learning', 'MLOps', 'Bioinformatics', 'Computational Biology', 
+                'Medical Image Analysis', 'Genomics', 'Cloud Computing', 'Microservices', 'Data Engineering',
+                'Python', 'PyTorch', 'TensorFlow', 'AWS', 'Azure', 'Docker', 'Kubernetes'].map((skill, idx) => (
+                <span key={idx} className="px-4 py-2 bg-white text-gray-800 font-semibold text-sm rounded-full border-2 border-blue-400 shadow-md hover:shadow-lg transition-shadow">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => {
-              const categoryColors = ['text-blue-600', 'text-purple-600', 'text-green-600', 'text-orange-600', 'text-pink-600', 'text-indigo-600', 'text-teal-600', 'text-cyan-600']
-              const borderColors = ['border-blue-300', 'border-purple-300', 'border-green-300', 'border-orange-300', 'border-pink-300', 'border-indigo-300', 'border-teal-300', 'border-cyan-300']
+              const categoryColors = ['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500', 'bg-pink-500', 'bg-indigo-500', 'bg-teal-500', 'bg-cyan-500']
+              const textColors = ['text-blue-700', 'text-purple-700', 'text-green-700', 'text-orange-700', 'text-pink-700', 'text-indigo-700', 'text-teal-700', 'text-cyan-700']
               return (
-              <div key={index} className="bg-white/60 p-4 rounded-lg shadow-sm">
-                <h3 className={`text-base font-normal ${categoryColors[index % categoryColors.length]} mb-4 border-b-2 ${borderColors[index % borderColors.length]} pb-2`}>
-                  {category.title}
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-t-4" style={{borderTopColor: categoryColors[index % categoryColors.length].replace('bg-', '#')}}>
+                <h3 className={`text-lg font-bold ${textColors[index % textColors.length]} mb-4 flex items-center`}>
+                  <span className="mr-2">▸</span> {category.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, sIndex) => {
@@ -889,11 +1100,11 @@ export default function Home() {
                     return (
                       <span
                         key={sIndex}
-                        className="px-2 py-1 text-xs text-gray-600 border border-gray-300 flex items-center gap-1.5 hover:border-gray-400 transition-colors"
+                        className="px-3 py-1.5 text-sm text-gray-700 bg-gray-50 border-2 border-gray-300 rounded-lg flex items-center gap-2 hover:border-blue-400 hover:bg-blue-50 transition-all font-medium"
                       >
                         {IconComponent && (
                           <IconComponent 
-                            className="w-3.5 h-3.5" 
+                            className="w-4 h-4" 
                             style={{ color: iconColor }}
                           />
                         )}
@@ -905,6 +1116,29 @@ export default function Home() {
               </div>
             )
             })}
+          </div>
+
+          {/* Additional Technical Proficiencies */}
+          <div className="mt-12 bg-white p-8 rounded-lg shadow-lg border-l-4 border-green-500">
+            <h3 className="text-2xl font-bold text-green-700 mb-6">🔧 Additional Technical Proficiencies</h3>
+            <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+              <div>
+                <p className="font-bold text-green-600 mb-2">Research & Analysis:</p>
+                <p className="text-sm">ANTsX, FreeSurfer, FSL, PLINK, CPASSOC, OMOP CDM, OHDSI Tools, Statistical Analysis, Data Visualization</p>
+              </div>
+              <div>
+                <p className="font-bold text-blue-600 mb-2">Development & DevOps:</p>
+                <p className="text-sm">CI/CD (Jenkins, GitHub Actions), Git, Agile/Scrum, Test-Driven Development, Code Review, Technical Documentation</p>
+              </div>
+              <div>
+                <p className="font-bold text-purple-600 mb-2">Soft Skills:</p>
+                <p className="text-sm">Technical Leadership, Cross-functional Collaboration, Research Communication, Mentoring, Problem Solving</p>
+              </div>
+              <div>
+                <p className="font-bold text-orange-600 mb-2">Domain Expertise:</p>
+                <p className="text-sm">Healthcare AI, Precision Medicine, Alzheimer's Disease Research, EHR Systems, Clinical Data Standards</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
