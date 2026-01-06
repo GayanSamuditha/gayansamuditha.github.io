@@ -473,107 +473,139 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-200/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          {/* Status badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-100 to-emerald-100 border border-green-300 rounded-full text-sm text-green-700 font-medium mb-6">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            Open to PhD Opportunities & Industry Collaborations
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
-            Gayan Samuditha
-          </h1>
-          
-          {/* Impactful tagline */}
-          <p className="text-2xl md:text-3xl font-semibold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI/ML Engineer</span>
-            <span className="text-gray-400 mx-3">×</span>
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Biomedical Researcher</span>
-          </p>
-          
-          <p className="text-lg text-gray-600 mb-8 font-light">
-            MS Research @ Case Western Reserve University, School of Medicine
-          </p>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left side - Profile Image with Animations */}
+            <div className="order-2 lg:order-1 flex justify-center">
+              <div className="relative group">
+                {/* Animated rings */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-20 blur-xl animate-pulse group-hover:opacity-40 transition-opacity"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full opacity-30 animate-spin-slow"></div>
+                
+                {/* Image container with slide animation */}
+                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl animate-fade-in-up">
+                  <Image
+                    src="/images/profile.jpg"
+                    alt="Gayan Samuditha"
+                    fill
+                    className="object-cover object-top hover:scale-110 transition-transform duration-700"
+                    priority
+                  />
+                </div>
+                
+                {/* Floating badges around image */}
+                <div className="absolute -top-4 -right-4 px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full shadow-lg animate-bounce" style={{animationDelay: '0.5s'}}>
+                  AI/ML
+                </div>
+                <div className="absolute -bottom-2 -left-4 px-3 py-1 bg-purple-500 text-white text-xs font-bold rounded-full shadow-lg animate-bounce" style={{animationDelay: '1s'}}>
+                  Biomedical
+                </div>
+                <div className="absolute top-1/2 -right-8 px-3 py-1 bg-pink-500 text-white text-xs font-bold rounded-full shadow-lg animate-bounce" style={{animationDelay: '1.5s'}}>
+                  Research
+                </div>
+              </div>
+            </div>
 
-          {/* Key metrics - attention grabbers */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10">
-            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
-              <div className="text-2xl font-bold text-blue-600">6+</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wide">Years Industry Experience</div>
-            </div>
-            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
-              <div className="text-2xl font-bold text-purple-600">3+</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wide">Research Publications</div>
-            </div>
-            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
-              <div className="text-2xl font-bold text-green-600">1000s</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wide">MRI Scans Processed</div>
-            </div>
-            <div className="px-6 py-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100">
-              <div className="text-2xl font-bold text-orange-600">5+</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wide">Production ML Systems</div>
-            </div>
-          </div>
+            {/* Right side - Text Content */}
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              {/* Status badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-100 to-emerald-100 border border-green-300 rounded-full text-sm text-green-700 font-medium mb-6 animate-fade-in-up">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Open to PhD Opportunities & Industry Collaborations
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                Gayan Samuditha
+              </h1>
+              
+              {/* Impactful tagline */}
+              <p className="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI/ML Engineer</span>
+                <span className="text-gray-400 mx-2">×</span>
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Biomedical Researcher</span>
+              </p>
+              
+              <p className="text-lg text-gray-600 mb-6 font-light animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+                MS Research @ Case Western Reserve University, School of Medicine
+              </p>
 
-          {/* Value proposition */}
-          <div className="max-w-3xl mx-auto mb-10">
-            <p className="text-lg text-gray-700 font-medium mb-4">
-              Bridging <span className="text-blue-600 font-semibold">Industry-Scale Engineering</span> with <span className="text-purple-600 font-semibold">Cutting-Edge Research</span>
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Former <strong>Associate Technical Lead</strong> turned AI/ML Researcher. I build production-grade ML pipelines for large-scale neuroimaging, genomics, and healthcare AI. Passionate about translating research into real-world impact—from Alzheimer's disease biomarker discovery to DNA language models.
-            </p>
-          </div>
+              {/* Key metrics - attention grabbers */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+                <div className="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 hover:scale-105 transition-transform">
+                  <div className="text-xl font-bold text-blue-600">6+</div>
+                  <div className="text-xs text-gray-500 uppercase tracking-wide">Years Experience</div>
+                </div>
+                <div className="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 hover:scale-105 transition-transform">
+                  <div className="text-xl font-bold text-purple-600">3+</div>
+                  <div className="text-xs text-gray-500 uppercase tracking-wide">Publications</div>
+                </div>
+                <div className="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 hover:scale-105 transition-transform">
+                  <div className="text-xl font-bold text-green-600">1000s</div>
+                  <div className="text-xs text-gray-500 uppercase tracking-wide">MRIs Processed</div>
+                </div>
+                <div className="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 hover:scale-105 transition-transform">
+                  <div className="text-xl font-bold text-orange-600">5+</div>
+                  <div className="text-xs text-gray-500 uppercase tracking-wide">ML Systems</div>
+                </div>
+              </div>
 
-          {/* Dual CTA buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <a
-              href="mailto:gayancwru@gmail.com?subject=PhD%20Opportunity"
-              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
-            >
-              🎓 Discuss PhD Opportunities
-            </a>
-            <a
-              href="mailto:gayancwru@gmail.com?subject=Industry%20Opportunity"
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
-            >
-              💼 Explore Industry Roles
-            </a>
-            <a
-              href="/cv/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 border-2 border-gray-800 text-gray-800 font-medium rounded-lg hover:bg-gray-800 hover:text-white transition-all"
-            >
-              📄 Download CV
-            </a>
-          </div>
-          
-          {/* Social links */}
-          <div className="flex justify-center gap-6">
-            {socialLinks.map((social, idx) => {
-              const Icon = social.icon
-              const colors = ['text-blue-500', 'text-gray-800', 'text-blue-600', 'text-red-500', 'text-pink-500']
-              return (
+              {/* Brief description */}
+              <p className="text-gray-600 leading-relaxed mb-8 max-w-xl animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+                Former <strong>Associate Technical Lead</strong> turned AI/ML Researcher. Building production-grade ML pipelines for neuroimaging, genomics, and healthcare AI.
+              </p>
+
+              {/* CTA buttons */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
                 <a
-                  key={social.text}
-                  href={social.href}
+                  href="mailto:gayancwru@gmail.com?subject=PhD%20Opportunity"
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all text-sm"
+                >
+                  🎓 PhD Opportunities
+                </a>
+                <a
+                  href="mailto:gayancwru@gmail.com?subject=Industry%20Opportunity"
+                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all text-sm"
+                >
+                  💼 Industry Roles
+                </a>
+                <a
+                  href="/cv/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${colors[idx % colors.length]} hover:scale-125 transition-transform p-2 bg-white/50 rounded-full shadow-sm`}
-                  aria-label={social.text}
+                  className="px-6 py-3 border-2 border-gray-800 text-gray-800 font-medium rounded-lg hover:bg-gray-800 hover:text-white transition-all text-sm"
                 >
-                  <Icon className="w-5 h-5" />
+                  📄 CV
                 </a>
-              )
-            })}
+              </div>
+              
+              {/* Social links */}
+              <div className="flex justify-center lg:justify-start gap-4 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+                {socialLinks.map((social, idx) => {
+                  const Icon = social.icon
+                  const colors = ['text-blue-500', 'text-gray-800', 'text-blue-600', 'text-red-500', 'text-pink-500']
+                  return (
+                    <a
+                      key={social.text}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${colors[idx % colors.length]} hover:scale-125 transition-transform p-2 bg-white/50 rounded-full shadow-sm`}
+                      aria-label={social.text}
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
       {/* What I Bring - Dual Value Proposition */}
       <section id="value" className="py-20 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
         <div className="max-w-6xl mx-auto">
