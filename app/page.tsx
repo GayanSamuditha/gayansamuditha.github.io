@@ -44,16 +44,24 @@ import {
   SiPowershell,
   SiSonarqube,
   SiGithubactions,
-  SiFreebsd
+  SiFreebsd,
+  SiGooglescholar
 } from 'react-icons/si'
 import { BiDna, BiBrain } from 'react-icons/bi'
 import { GiArtificialIntelligence } from 'react-icons/gi'
 
 export default function Home() {
+  const profileLinks = {
+    github: 'https://github.com/GayanSamuditha',
+    scholar: 'https://scholar.google.com/citations?user=ARKdd88AAAAJ&hl=en',
+    linkedin: 'https://www.linkedin.com/in/gayan-samuditha-023013114/',
+  }
+
   const socialLinks = [
     { icon: FaTwitter, href: 'https://twitter.com/GSam_Stack', text: 'Twitter' },
-    { icon: FaGithub, href: 'https://github.com/GayanSamuditha', text: 'Github' },
-    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/gayan-samuditha-023013114/', text: 'LinkedIn' },
+    { icon: FaGithub, href: profileLinks.github, text: 'Github' },
+    { icon: FaLinkedin, href: profileLinks.linkedin, text: 'LinkedIn' },
+    { icon: SiGooglescholar, href: profileLinks.scholar, text: 'Google Scholar' },
     { icon: FaEnvelope, href: 'mailto:gayancwru@gmail.com', text: 'Email' },
     { icon: FaInstagram, href: 'https://www.instagram.com/gayya_syack/', text: 'Instagram' },
   ]
@@ -72,17 +80,22 @@ export default function Home() {
   const researchExperience = [
     {
       company: "Case Western Reserve University, School of Medicine",
-      location: "Ohio, United States",
-      role: "Research Assistant - Medical Imaging, Genetic Informatics, Deep Learning",
-      period: "2023",
+      location: "Cleveland, OH, United States",
+      role: "Graduate Research Engineer – Neuroimaging, Multimodal Integration, and Biomedical Data Harmonization",
+      period: "Jul 2023 – May 2026",
       achievements: [
-        "Designed and implemented production-grade brain MRI analysis pipelines using the ANTsX ecosystem (ANTsPy/ANTsR/ANTsRNet) with longitudinal registration, deep learning-based brain extraction, tissue segmentation, and cortical thickness (DiReCT) to generate imaging-derived phenotypes (IDPs) from ADNI MRI data.",
-        "Built scalable Python and R workflows to process T1/T2/FLAIR MRI at scale, including N4 bias correction, denoising, and automated quality control, running on HPC nodes with parallelization and job orchestration.",
-        "Integrated high-dimensional brain morphology features with GWAS data to run cross-phenotype association analyses (CPASSOC), discovering variants linked to cortical thickness and volumetric changes across normal aging, MCI, and AD.",
-        "Engineered patient-level similarity kernels (RBF over FreeSurfer ROIs) to quantify \"AD-likeness,\" enabling clustering, subtype discovery, and risk scoring workflows for downstream modeling.",
-        "Developed harmonized multi-cohort datasets by merging imaging, genotype, and cognitive assessments (MMSE, CDR), implementing rigorous data QC, outlier detection, and missing-data handling for modeling and visualization.",
-        "Designed and deployed an electronic phenotyping pipeline by transforming raw EHR data into the OMOP Common Data Model and integrating with OHDSI Broadsea (Atlas, HADES, Ares) in Docker, enabling large-scale observational studies.",
-        "Led development of an unsupervised evaluation framework for pre-trained DNA language model embeddings (RankMe, NESum, StableRank) and released the benchmarking toolkit as the open-source embedding-quality Python package."
+        "🧠 Prof. Xiaofeng Zhu Lab – Imaging Genomics",
+        "Built and stabilized cohort-scale neuroimaging analysis pipelines on the ADNI dataset, processing nearly 3,000 MRI subjects end-to-end using ANTsX, ANTsPyNet, and DiReCT for skull stripping, brain extraction, tissue segmentation, and cortical thickness estimation.",
+        "Designed reproducible HPC-orchestrated workflows on Linux clusters for high-throughput MRI preprocessing with structured output organization, automated QC, and failure inspection for thousands of jobs.",
+        "Integrated a 619-subject cohort combining imaging-derived phenotypes, genotype/GWAS variants, and clinical variables into harmonized tables for statistical modeling and machine learning.",
+        "Supported a cross-phenotype GWAS of brain-morphology features using vision-transformer-based representations (ASHG 2024 poster).",
+        "Converted scientific requirements into reusable analysis software, including QC dashboards and data dictionaries, based on feedback from clinicians and researchers.",
+        "🧬 Prof. William S. Bush Lab – Computational Big Data Lab",
+        "Engineered transformation pipelines converting UK Biobank data to OMOP Common Data Model (CDM 5.3.1) for 502,000+ participants using Delphyne, PostgreSQL, and Broadsea, supporting OHDSI tools like Atlas and Hades (ASHG 2023 poster).",
+        "Architected a PostgreSQL platform with pgvector/pgvectorscale for biomedical data harmonization using semantic retrieval, Nomic embeddings, and local Llama inference to standardize sensitive dbGaP research variables without external API dependencies.",
+        "Developed ETL workflows for biomedical data dictionaries with automated quality checks and human-reviewable mapping outputs.",
+        "Built Python pipelines for AlphaFold 3 and DNA language model embeddings, automating input generation, batch HPC execution, and quantitative quality metrics (BMC Genomics, 2025).",
+        "Designed PostgreSQL schemas and semantic search workflows for large-scale biomedical metadata to support AI-assisted variable mapping."
       ]
     }
   ]
@@ -90,104 +103,98 @@ export default function Home() {
   // Professional Experience
   const professionalExperience = [
     {
-      company: "Virtusa Corporation - ETDS Segment (Enterprise Transformation & Digital Solutions)",
-      location: "Colombo, Western Province, Sri Lanka (Remote)",
+      company: "Virtusa Corporation — EAG · ETDS Organization",
+      location: "Colombo, Western Province, Sri Lanka (On-site)",
       role: "Associate Technical Lead",
-      period: "Dec 2022 - Jul 2023 (8 months)",
+      period: "Jan 2023 – Jul 2023 (7 months) · 6 yrs 2 mos total at Virtusa",
       achievements: [
-        "Working on Enterprise Transformation & Digital Solutions segment, utilizing digital technologies to upgrade existing business processes and customer experiences.",
-        "Technologies: Spring, SpringBoot, Hibernate, OracleSQL, Microservices, API Gateways, OAuth 2.0, Azure Cloud."
+        "Led a 19-member cross-functional delivery team (Engineering, QA, Quality, DevOps) shipping enterprise product and platform releases.",
+        "Managed sprint execution, roadmap breakdowns, estimations, task allocation, dependency management, release planning, and delivery governance.",
+        "Reported directly to the VP of Engineering with weekly status updates, delivery forecasts, risk escalations, and resourcing updates.",
+        "Acted as technical owner for core services and integrations; led architecture/design reviews, coding standards, and implementation-quality reviews.",
+        "Managed end-to-end release processes including QA alignment, release gates, CI/CD readiness, deployment coordination, and post-release stabilization.",
+        "Integrated OpenAI APIs into Virtusa V+ Assistant for skill updates, skill matching, project allocation, and job description generation.",
+        "Built Azure Logic Apps workflows automating 40+ talent, resource allocation, hiring, and staffing workflows for a 30,000+ employee organization.",
+        "Delivered ML-powered content classification for high-volume physical and digital documents, improving search, analytics, and compliance workflows.",
+        "Contributed to Virtusa Enterprise Cloud Platform development for scalability and modularity to accelerate digital transformation.",
+        "Integrated Azure, AWS, and GCP with legacy systems for AI/ML/GenAI readiness, cost efficiency, and security through evolutionary migration."
       ]
     },
     {
-      company: "Virtusa Corporation - ETDS Segment",
-      location: "Colombo, Western Province, Sri Lanka",
+      company: "Virtusa Corporation — Iron Mountain (Client)",
+      location: "Colombo, Sri Lanka (On-site)",
       role: "Senior Software Engineer",
-      period: "Jun 2022 - Jan 2023 (8 months)",
+      period: "Sep 2021 – Dec 2022 (1 yr 4 mos)",
       achievements: [
-        "Working on Enterprise Transformation & Digital Solutions segment, focusing on digital transformation to upgrade business processes and customer experiences.",
-        "Technologies: Spring, SpringBoot, Hibernate, OracleSQL, Microservices, API Gateways, OAuth 2.0, Azure Cloud."
+        "Senior engineer on Virtusa's Iron Mountain product engineering team for TMT East, supporting Smart Sort Mobile App, Sierra26, SecureBase, and SafeKeeper PLUS.",
+        "Sierra26: SMB-focused records and information management platform for offsite document storage, barcode inventory tracking, reporting, secure handling, scanning, and warehouse operations.",
+        "Modernized legacy SecureBase workflows via Sierra26 dashboard features for barcode box scanning, inventory tracking, reporting, and warehouse operations.",
+        "Engineered Java microservices, backend APIs, services, and CLI tools for SafeKeeper PLUS covering inventory tracking, retrieval, delivery, destruction, billing, reporting, and compliance.",
+        "Built user-facing dashboard workflows and frontend components for inventory visibility, records movement, warehouse activities, and operational reporting.",
+        "Integrated Sierra26 frontend workflows with backend APIs and external services using React Native, AngularJS, and Java.",
+        "Supported production troubleshooting, workflow validation, defect fixes, and iterative enhancements for records-management platforms.",
+        "Collaborated with engineering, QA, DevOps, and client stakeholders to translate records-management and logistics requirements into reliable product workflows."
       ]
     },
     {
-      company: "Virtusa Corporation - ETDS Segment",
-      location: "Colombo, Western Province, Sri Lanka",
-      role: "Senior Software Engineer",
-      period: "Jun 2022 - Dec 2022 (7 months)",
-      achievements: [
-        "Working on Enterprise Transformation & Digital Solutions segment, utilizing digital technologies for business transformation."
-      ]
-    },
-    {
-      company: "Virtusa Corporation - Iron Mountain (Client)",
-      location: "Colombo, Western, Sri Lanka / Collegeville, Pennsylvania, USA",
+      company: "Virtusa Corporation — Iron Mountain | ReWrite Smart Sort (Client)",
+      location: "Colombo, Sri Lanka (On-site)",
       role: "Software Engineer",
-      period: "May 2021 - May 2022 (1 year 1 month)",
+      period: "Apr 2020 – Aug 2021 (1 yr 5 mos)",
       achievements: [
-        "Working on TMT East segment Iron Mountain Team at Virtusa USA. Client Company - Iron Mountain Corporation.",
-        "Software engineer on the Sierra26 product engineering team. SIERRA26 is an all-in-one solution for records and information management, leveraging Iron Mountain's industry-leading capabilities for offsite document storage, secure shredding, and document scanning.",
-        "Helping businesses stay on top of legal requirements and records retention policies by managing the entire process.",
-        "More info: https://discovery.sierra26.com/",
-        "Tech Stack: JavaEE, Spring, SpringBoot, Hibernate, OracleDB, JUnit5, Jest, Google Cloud Platform."
+        "Modernized and rewrote core workflows for Iron Mountain's Smart Sort Mobile App — a React Native handheld-scanner application for high-volume records cleanup supporting barcode processing, retention-policy decisioning, sorting, reboxing, exception handling, and reporting.",
+        "Rewrote 5 core workflows in React Native: barcode scanning, manual File ID capture, real-time disposition decisions, reboxing confirmation, exception handling, and reporting.",
+        "Integrated the mobile app with backend APIs and GCP-based data pipelines to synchronize scanned records with downstream inventory and management systems.",
+        "Enabled file-level visibility and defensible disposition, contributing to documented client storage cost reductions of 33–40%+.",
+        "Built workflow-driven mobile screens to reduce manual lookup effort and improve scan-to-disposition usability for warehouse teams.",
+        "Handled production troubleshooting, defect fixes, and iterative enhancements to improve application stability and operational accuracy."
       ]
     },
     {
-      company: "Virtusa Corporation - Iron Mountain (Client)",
-      location: "Sri Lanka / Boston, USA",
-      role: "Software Engineer",
-      period: "Aug 2020 - Apr 2021 (9 months)",
-      achievements: [
-        "Working on Virtusa client project - Iron Mountain. Iron Mountain Incorporated (NYSE: IRM) is a global business dedicated to storing, protecting, and managing information and assets.",
-        "Managing their client record management platform. Working on a team transforming the current IRM platform to cloud-based platform (R&D)."
-      ]
-    },
-    {
-      company: "Virtusa Corporation - Modjoul Engineering & AWS (Client)",
-      location: "Colombo, Western, Sri Lanka / South Carolina, USA",
-      role: "Software Engineer",
-      period: "Mar 2020 - Jul 2020 (5 months)",
-      achievements: [
-        "The Modjoul platform aimed to tackle multifaceted challenges by leveraging a heterogeneous IoT-based infrastructure, facilitating seamless integration of worker-generated data from wearables (SmartBelt) alongside machine-oriented data from diverse equipment (forklifts, trucks, factory machinery), and structured/unstructured corporate data.",
-        "Actively contributed to strategic transformation of the existing Modjoul platform, transitioning architecture to microservices paradigm utilizing NodeJS and Kubernetes stack for greater modularity, scalability, and flexibility.",
-        "Technology Stack (R&D): NodeJS, React, React Native, Redux, Angular, JavaScript, TypeScript, Express JS, HTML5, CSS3, jQuery, Bootstrap5, RESTful APIs, SOAP APIs, Jira, Spock, Jest, Mocha, AWS (Cognito, VPC, Code Commit, S3, Code Build, Code Pipeline, Tesseract, EC2, RDS, API Gateway, CloudFront), GitHub, GitLab CI/CD, CircleCI, Docker, Kubernetes."
-      ]
-    },
-    {
-      company: "Virtusa Corporation - British Telecommunication (Client)",
-      location: "Colombo, Western, Sri Lanka / United Kingdom",
+      company: "Virtusa Corporation — Modjoul (Client)",
+      location: "Colombo, Sri Lanka (On-site)",
       role: "Associate Software Engineer",
-      period: "Dec 2019 - Mar 2020 (4 months)",
+      period: "Dec 2019 – Mar 2020 (4 months)",
       achievements: [
-        "Working with Virtusa client – British Telecommunication in the UK. Trained for BT client-specific project based on Microservices and API management.",
-        "Worked with business domain experts on understanding and designing integration use cases for given business API. The project was for financial sector in UK.",
-        "Worked with internal teams to develop the current platform and tools."
+        "Engineered backend services and high-throughput data pipelines for an AWS-based IoT analytics platform processing sensor data from thousands of SmartBelt wearable devices.",
+        "Built product dashboards and reporting workflows surfacing safety-risk signals, device activity, operational trends, and workplace productivity insights for enterprise users.",
+        "Developed near real-time analytics workflows transforming wearable sensor streams into actionable safety insights for injury prevention and operational decision-making.",
+        "Implemented real-time alerting and device-health monitoring to track connectivity, data quality, and safety-event signals across deployed wearables.",
+        "Supported backend API development, data modeling, dashboard validation, production troubleshooting, and iterative platform improvements.",
+        "More info: https://www.virtusa.com/success-stories/aws-based-iot-data-aggregation-analytics-platform"
       ]
     },
     {
-      company: "Virtusa Corporation - British Telecommunication (Client)",
-      location: "Colombo, Western Province, Sri Lanka (Remote)",
-      role: "External Consultant",
-      period: "Aug 2018 - Nov 2019 (1 year 4 months)",
+      company: "Virtusa Corporation — Global Technology Office (GTO)",
+      location: "Colombo, Sri Lanka (Remote)",
+      role: "External Consultant (Software Engineer)",
+      period: "Aug 2018 – Nov 2019 (1 yr 4 mos) · Part-time",
       achievements: [
-        "Part-time external consultant role working on British Telecommunication projects."
+        "Worked as product and support engineer across internal R&D products: InsightLive, LUMOS, AITEST, ERA+, ACCELLO, CENTROID, and AIRIS.",
+        "Engineered framework components for Virtusa InsightLive, a cloud-native SDLC gamification and engineering-intelligence platform on AWS and GCP, transforming delivery KPIs into dashboards and scorecards.",
+        "Supported product users via troubleshooting, workflow validation, UI improvements, backend/API defect fixes, and coordinated enhancements from engineering teams.",
+        "Enhanced test-management accelerators (Lumos Test, AITEST) for backend workflows, UI flows, test design, execution, analytics, and reporting.",
+        "Contributed to reusable SDLC/DevSecOps components, delivery telemetry dashboards, and engineering governance accelerators.",
+        "Citi Telemetry Platform: Architected backend ETL pipelines, data models, and high-volume telemetry layers using ELK Stack (Elasticsearch, Logstash, Kibana) and Apache POI; built Citi SDLC Telemetry System with KPI/metrics logic and customized Kibana dashboards."
       ]
     },
     {
-      company: "Virtusa Corporation - Global Technology Office (GTO)",
-      location: "Colombo, Western, Sri Lanka",
-      role: "Software Engineer Intern - Research and Development",
-      period: "Jun 2017 - Jul 2018 (1 year 2 months)",
+      company: "Virtusa Corporation — Global Technology Office (GTO)",
+      location: "Colombo, Sri Lanka (On-site)",
+      role: "Software Engineer Intern",
+      period: "Jun 2017 – Jul 2018 (1 yr 2 mos)",
       achievements: [
-        "Software Engineer Intern at the Global Technology Office (GTO) of Virtusa Corporation (NASDAQ: VRTU), working on cutting-edge R&D initiatives aimed at advancing engineering excellence.",
-        "Member of Speed Cloud Platform Team and ERA Platform Team, contributing to transformative projects leveraging advanced technologies and architectures.",
-        "GTO Solution Suite initiative designed to accelerate and optimize the software development life cycle (SDLC) by reducing complexity and volume of work associated with large development projects.",
-        "Projects – Industry Experienced:",
-        "• GTO Project: ERA+ (Enterprise SDLC dashboarding and gamification)",
-        "• GTO Project: AITEST (Intelligent Test Management and Optimization Tool)",
-        "• GTO Project: LUMOS (Intelligent Requirement Clarity Assessment Framework)",
-        "• GTO Project: ACCELLO (Accelerating Software Robotics)",
-        "• GTO Project: CENTROID (Enterprise-grade Digital Test Automation tool)",
-        "• GTO Project: AIRIS (Intelligent Requirement Capturing Platform)"
+        "Member of Speed Cloud Platform Team and ERA Platform Team, contributing to GTO R&D initiatives advancing engineering excellence.",
+        "ACCELLO (AI-native QA & digital test automation): Built backend services and workflow components to automate regression workflows and reduce manual QA effort.",
+        "More info: https://www.virtusa.com/lp/seamless-qa-without-the-slowdowns",
+        "CENTROID (RPA-based E2E test automation): Developed backend workflow logic and UI workflows converting manual regression scenarios into reusable automated components.",
+        "More info: https://www.virtusa.com/news-room/press-releases/year_2017/September/33535",
+        "LUMOS (NLP-driven requirement clarity): Implemented backend and front-end workflows with Jira-integrated feedback flows to improve requirement quality.",
+        "More info: https://marketplace.atlassian.com/archive/1222231",
+        "AIRIS (Business process modeling): Developed backend workflows, APIs, and UI flows modeling business processes into structured requirement artifacts for DevOps and automation tools.",
+        "ERA+ (SDLC KPI surfacing): Built gamification dashboards and visualization workflows tracking delivery performance and engineering productivity.",
+        "More info: https://www.virtusa.com/solutions/open-talent-platform",
+        "Lumos Test & AITEST: Enhanced test management accelerators for test design, execution, analytics, and reporting."
       ]
     },
     {
@@ -423,18 +430,70 @@ export default function Home() {
   const technicalProjects = [
     {
       title: "Large-Scale Brain MRI Pipeline for Alzheimer's Disease",
-      technologies: "Python, ANTsX, FreeSurfer, HPC",
-      description: "End-to-end pipeline that processes thousands of MRI scans (T1/T2/FLAIR) to extract cortical thickness, volumes, and regional morphometry, parallelized over HPC nodes with automated QC and logging."
+      technologies: "Python, ANTsX, ANTsPyNet, DiReCT, HPC",
+      description: "End-to-end pipeline processing nearly 3,000 ADNI MRI subjects for cortical thickness, volumes, and regional morphometry with HPC-orchestrated workflows, automated QC, and failure inspection.",
+      link: profileLinks.github
     },
     {
-      title: "Electronic Phenotyping on OMOP CDM",
-      technologies: "Python, SQL, Docker, OHDSI Broadsea",
-      description: "Implemented data transformation from raw EHR exports into OMOP CDM and deployed OHDSI Broadsea stack to enable Atlas-based cohort definition and large-scale phenotyping analysis."
+      title: "UK Biobank → OMOP CDM Electronic Phenotyping",
+      technologies: "Python, PostgreSQL, Delphyne, OHDSI Broadsea",
+      description: "Transformed UK Biobank data to OMOP CDM 5.3.1 for 502,000+ participants, enabling Atlas-based cohort definition and large-scale observational research (ASHG 2023).",
+      link: profileLinks.scholar
     },
     {
       title: "DNA Language Model Embedding Evaluation Toolkit",
       technologies: "Python, ML, Open Source",
-      description: "Developed open-source embedding-quality package benchmarking multiple DNA LMs using unsupervised metrics (RankMe, NESum, StableRank) across diverse genomic datasets."
+      description: "Open-source embedding-quality package benchmarking DNA language models using unsupervised metrics (RankMe, NESum, StableRank); published in BMC Genomics (2025).",
+      link: profileLinks.github
+    },
+    {
+      title: "Virtusa V+ Assistant — OpenAI Integration",
+      technologies: "OpenAI APIs, Azure, React",
+      description: "Integrated OpenAI APIs into Virtusa V+ Assistant for skill updates, skill matching, project allocation, and job description generation across a 30,000+ employee organization."
+    },
+    {
+      title: "Azure Logic Apps — Talent & Staffing Automation",
+      technologies: "Azure Logic Apps, REST APIs",
+      description: "Built workflows automating 40+ talent, resource allocation, hiring, and staffing processes for enterprise workforce management."
+    },
+    {
+      title: "ACCELLO — AI-native QA & Test Automation",
+      technologies: "Java, JavaScript, RPA",
+      description: "Built backend services and workflow components to automate regression workflows and reduce manual QA effort in Virtusa's GTO R&D platform.",
+      link: "https://www.virtusa.com/lp/seamless-qa-without-the-slowdowns"
+    },
+    {
+      title: "CENTROID — RPA-based E2E Test Automation",
+      technologies: "RPA, Java, UI Automation",
+      description: "Developed backend workflow logic and UI workflows converting manual regression scenarios into reusable automated components.",
+      link: "https://www.virtusa.com/news-room/press-releases/year_2017/September/33535"
+    },
+    {
+      title: "LUMOS — NLP-driven Requirement Clarity",
+      technologies: "NLP, Jira Integration, Java",
+      description: "Implemented backend and front-end workflows with Jira-integrated feedback flows to improve requirement quality and developer-task matching.",
+      link: "https://marketplace.atlassian.com/archive/1222231"
+    },
+    {
+      title: "Iron Mountain Smart Sort Mobile App",
+      technologies: "React Native, GCP, REST APIs",
+      description: "Rewrote 5 core warehouse workflows for barcode scanning, disposition decisions, and reboxing; contributed to documented storage cost reductions of 33–40%+."
+    },
+    {
+      title: "Sierra26 & SafeKeeper PLUS — Records Management",
+      technologies: "Java, React Native, AngularJS, GCP",
+      description: "Engineered Java microservices and dashboard workflows for inventory tracking, retrieval, destruction, billing, and compliance across Iron Mountain records platforms."
+    },
+    {
+      title: "Modjoul IoT Safety Analytics Platform",
+      technologies: "AWS, Node.js, IoT, Real-time Analytics",
+      description: "Built backend pipelines and dashboards processing SmartBelt wearable sensor data for workplace safety insights, alerting, and device-health monitoring.",
+      link: "https://www.virtusa.com/success-stories/aws-based-iot-data-aggregation-analytics-platform"
+    },
+    {
+      title: "Citi SDLC Telemetry System",
+      technologies: "ELK Stack, Apache POI, Kibana",
+      description: "Architected ETL pipelines and KPI/metrics logic ingesting SDLC delivery data for enterprise engineering-governance dashboards at a major U.S. banking client."
     }
   ]
 
@@ -503,7 +562,8 @@ export default function Home() {
                     src="/images/profile.jpg"
                     alt="Gayan Samuditha"
                     fill
-                    className="object-cover object-top hover:scale-110 transition-transform duration-700"
+                    className="object-cover hover:scale-110 transition-transform duration-700"
+                    style={{ objectPosition: '54% 44%' }}
                     priority
                   />
                 </div>
@@ -630,7 +690,7 @@ export default function Home() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 mt-1">✓</span>
-                  <span><strong>6+ years</strong> building scalable backend systems at enterprise scale (Virtusa, Iron Mountain, British Telecom)</span>
+                  <span><strong>6+ years</strong> building scalable backend systems at enterprise scale (Virtusa, Iron Mountain, Modjoul, Citi)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 mt-1">✓</span>
@@ -753,7 +813,7 @@ export default function Home() {
               I'm a <strong>rare hybrid</strong>: an engineer who thinks like a researcher and a researcher who builds like an engineer. With <strong>6+ years of production engineering</strong> at Fortune 500 clients and <strong>3+ years of academic research</strong> at a top medical school, I bring the best of both worlds.
             </p>
             <p>
-              <strong>My Journey:</strong> Started as a software engineer building enterprise platforms (Iron Mountain, British Telecom, Modjoul). Rose to <strong>Associate Technical Lead</strong> leading R&D teams. Then pivoted to research, pursuing MS at Case Western Reserve University where I fell in love with computational neuroscience and genomics.
+              <strong>My Journey:</strong> Started as a GTO intern building SDLC automation platforms (ACCELLO, CENTROID, LUMOS), then shipped enterprise products for Iron Mountain, Modjoul, and Citi. Rose to <strong>Associate Technical Lead</strong> leading a 19-member delivery team and integrating GenAI into Virtusa's talent platform. Now pursuing graduate research at Case Western Reserve University in neuroimaging, genomics, and biomedical data harmonization.
             </p>
             <p>
               <strong>Current Focus:</strong> Building large-scale ML pipelines for Alzheimer's disease research—processing thousands of brain MRIs, integrating genetic data, and applying DNA language models to uncover hidden patterns in the genome. My work has been published in <em>BMC Genomics</em> and presented at ASHG.
@@ -781,7 +841,7 @@ export default function Home() {
               📄 Download CV
             </a>
             <a
-              href="https://scholar.google.com"
+              href={profileLinks.scholar}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-purple-500 text-purple-600 font-medium rounded-lg hover:bg-purple-500 hover:text-white transition-all"
@@ -839,7 +899,14 @@ export default function Home() {
                   </div>
                   <ul className="space-y-2 mt-4">
                     {exp.achievements.map((achievement, aIndex) => (
-                      <li key={aIndex} className="text-sm text-gray-600 leading-relaxed">
+                      <li
+                        key={aIndex}
+                        className={`text-sm leading-relaxed ${
+                          achievement.startsWith('🧠') || achievement.startsWith('🧬')
+                            ? 'text-gray-800 font-semibold mt-4 list-none -ml-0'
+                            : 'text-gray-600'
+                        }`}
+                      >
                         {achievement.startsWith('More info:') ? (
                           <a 
                             href={achievement.split('More info: ')[1]} 
@@ -865,17 +932,33 @@ export default function Home() {
       {/* Selected Technical Projects Section */}
       <section id="technical-projects" className="py-24 px-6 border-t-2 border-green-200 bg-gradient-to-b from-purple-50/30 to-green-50/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-light text-gray-900 mb-16">
+          <h2 className="text-3xl font-light text-gray-900 mb-6">
             <span className="border-b-2 border-green-500 pb-2">Selected Technical Projects</span>
           </h2>
+          <div className="flex flex-wrap gap-3 mb-12">
+            <a href={profileLinks.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
+              <FaGithub className="w-4 h-4" /> GitHub Projects
+            </a>
+            <a href={profileLinks.scholar} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-500 transition-colors">
+              <SiGooglescholar className="w-4 h-4" /> Google Scholar
+            </a>
+            <a href={profileLinks.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors">
+              <FaLinkedin className="w-4 h-4" /> LinkedIn
+            </a>
+          </div>
           <div className="space-y-12">
             {technicalProjects.map((project, index) => {
-              const colors = ['border-l-blue-500', 'border-l-purple-500', 'border-l-green-500']
+              const colors = ['border-l-blue-500', 'border-l-purple-500', 'border-l-green-500', 'border-l-orange-500']
               return (
                 <div key={index} className={`border-l-4 ${colors[index % colors.length]} pl-6 bg-white/60 p-4 rounded-r-lg shadow-sm`}>
                   <h3 className="text-xl font-normal text-gray-900 mb-2">{project.title}</h3>
                   <p className="text-sm text-gray-500 mb-4">{project.technologies}</p>
                   <p className="text-sm text-gray-600 leading-relaxed">{project.description}</p>
+                  {'link' in project && project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm text-green-700 hover:text-green-900 hover:underline font-medium">
+                      View project →
+                    </a>
+                  )}
                 </div>
               )
             })}

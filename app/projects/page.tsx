@@ -1,12 +1,96 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { SiGooglescholar } from 'react-icons/si'
 import AnimatedSection from '@/components/AnimatedSection'
 import AnimatedCard from '@/components/AnimatedCard'
 
+const profileLinks = {
+  github: 'https://github.com/GayanSamuditha',
+  scholar: 'https://scholar.google.com/citations?user=ARKdd88AAAAJ&hl=en',
+  linkedin: 'https://www.linkedin.com/in/gayan-samuditha-023013114/',
+}
+
 export default function Projects() {
-  const projects = [
+  const enterpriseProjects = [
+    {
+      title: "Virtusa V+ Assistant — OpenAI Integration",
+      organization: "Virtusa Corporation · ETDS",
+      description: "Integrated OpenAI APIs into Virtusa V+ Assistant for skill updates, skill matching, project allocation, and job description generation across a 30,000+ employee organization.",
+      technologies: ["OpenAI APIs", "Azure", "React", "REST APIs"]
+    },
+    {
+      title: "ACCELLO — AI-native QA & Test Automation",
+      organization: "Virtusa GTO · R&D",
+      description: "Built backend services and workflow components to automate regression workflows and reduce manual QA effort.",
+      technologies: ["Java", "JavaScript", "RPA"],
+      link: "https://www.virtusa.com/lp/seamless-qa-without-the-slowdowns"
+    },
+    {
+      title: "CENTROID — RPA-based E2E Test Automation",
+      organization: "Virtusa GTO · R&D",
+      description: "Developed backend workflow logic and UI workflows converting manual regression scenarios into reusable automated components.",
+      technologies: ["RPA", "Java", "UI Automation"],
+      link: "https://www.virtusa.com/news-room/press-releases/year_2017/September/33535"
+    },
+    {
+      title: "LUMOS — NLP-driven Requirement Clarity",
+      organization: "Virtusa GTO · R&D",
+      description: "Implemented backend and front-end workflows with Jira-integrated feedback flows to improve requirement quality.",
+      technologies: ["NLP", "Jira", "Java"],
+      link: "https://marketplace.atlassian.com/archive/1222231"
+    },
+    {
+      title: "Iron Mountain Smart Sort Mobile App",
+      organization: "Virtusa · Iron Mountain Client",
+      description: "Rewrote 5 core React Native warehouse workflows for barcode scanning, disposition decisions, and reboxing; contributed to documented storage cost reductions of 33–40%+.",
+      technologies: ["React Native", "GCP", "REST APIs"]
+    },
+    {
+      title: "Sierra26 & SafeKeeper PLUS",
+      organization: "Virtusa · Iron Mountain Client",
+      description: "Engineered Java microservices and dashboard workflows for records inventory tracking, retrieval, destruction, billing, and compliance.",
+      technologies: ["Java", "React Native", "AngularJS", "GCP"]
+    },
+    {
+      title: "Modjoul IoT Safety Analytics Platform",
+      organization: "Virtusa · Modjoul Client",
+      description: "Built AWS-based backend pipelines and dashboards processing SmartBelt wearable sensor data for workplace safety insights and real-time alerting.",
+      technologies: ["AWS", "Node.js", "IoT", "Real-time Analytics"],
+      link: "https://www.virtusa.com/success-stories/aws-based-iot-data-aggregation-analytics-platform"
+    },
+    {
+      title: "Citi SDLC Telemetry System",
+      organization: "Virtusa GTO · Citi Client",
+      description: "Architected ELK Stack ETL pipelines and customized Kibana dashboards for SDLC delivery telemetry and engineering-governance KPIs.",
+      technologies: ["Elasticsearch", "Logstash", "Kibana", "Apache POI"]
+    }
+  ]
+
+  const researchProjects = [
+    {
+      title: "Large-Scale Brain MRI Pipeline (ADNI)",
+      organization: "CWRU · Zhu Lab",
+      description: "Cohort-scale neuroimaging pipelines processing nearly 3,000 MRI subjects with ANTsX, ANTsPyNet, and DiReCT on HPC clusters.",
+      technologies: ["Python", "ANTsX", "HPC", "GWAS"]
+    },
+    {
+      title: "UK Biobank → OMOP CDM Transformation",
+      organization: "CWRU · Bush Lab",
+      description: "Transformed UK Biobank data to OMOP CDM 5.3.1 for 502,000+ participants using Delphyne, PostgreSQL, and OHDSI Broadsea.",
+      technologies: ["Python", "PostgreSQL", "OMOP", "OHDSI"]
+    },
+    {
+      title: "DNA Language Model Embedding Evaluation",
+      organization: "CWRU · Bush Lab",
+      description: "Open-source toolkit benchmarking DNA language model embeddings; published in BMC Genomics (2025).",
+      technologies: ["Python", "ML", "HPC"],
+      link: profileLinks.github
+    }
+  ]
+
+  const academicProjects = [
     {
       title: "Nexus - Smart Home Garden Watering System (Home Watering Booster)",
       location: "University of Westminster, London, United Kingdom (Level 4 - 1st Year)",
@@ -35,16 +119,68 @@ export default function Projects() {
     }
   ]
 
+  const ProjectCard = ({ project, index }: { project: typeof enterpriseProjects[0]; index: number }) => (
+    <AnimatedCard key={index} delay={index * 0.1} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-1">{project.title}</h3>
+      <p className="text-primary-600 text-sm font-medium mb-3">{project.organization}</p>
+      <p className="text-gray-700 leading-relaxed mb-4">{project.description}</p>
+      <div className="flex flex-wrap gap-2 mb-3">
+        {project.technologies.map((tech, idx) => (
+          <span key={idx} className="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-xs font-medium">
+            {tech}
+          </span>
+        ))}
+      </div>
+      {'link' in project && project.link && (
+        <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 text-sm font-medium hover:underline">
+          View project →
+        </a>
+      )}
+    </AnimatedCard>
+  )
+
   return (
     <div className="pt-16 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <AnimatedSection>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Enterprise Cutting-Edge Projects</h1>
-          <p className="text-gray-600 mb-12">Innovative solutions in IoT and smart systems</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Projects</h1>
+          <p className="text-gray-600 mb-6">Enterprise, research, and academic projects across industry and academia.</p>
+          <div className="flex flex-wrap gap-3 mb-12">
+            <a href={profileLinks.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
+              <FaGithub className="w-4 h-4" /> GitHub
+            </a>
+            <a href={profileLinks.scholar} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-500 transition-colors">
+              <SiGooglescholar className="w-4 h-4" /> Google Scholar
+            </a>
+            <a href={profileLinks.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors">
+              <FaLinkedin className="w-4 h-4" /> LinkedIn
+            </a>
+          </div>
         </AnimatedSection>
 
+        <AnimatedSection delay={0.1}>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Enterprise & Industry Projects</h2>
+        </AnimatedSection>
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {enterpriseProjects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} />
+          ))}
+        </div>
+
+        <AnimatedSection delay={0.1}>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Research Projects</h2>
+        </AnimatedSection>
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {researchProjects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} />
+          ))}
+        </div>
+
+        <AnimatedSection delay={0.1}>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Academic IoT Projects</h2>
+        </AnimatedSection>
         <div className="space-y-12">
-          {projects.map((project, index) => (
+          {academicProjects.map((project, index) => (
             <AnimatedCard key={index} delay={index * 0.15} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="md:flex">
                 {project.image && (
@@ -104,4 +240,3 @@ export default function Projects() {
     </div>
   )
 }
-
